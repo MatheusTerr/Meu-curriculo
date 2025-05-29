@@ -31,6 +31,8 @@
             --button-text-color: #ffffff; 
             --button-border-color: var(--primary-color); 
             --project-note-text-color: var(--text-muted-color);
+            --chatbot-input-bg: var(--card-bg-color);
+            --chatbot-response-bg: var(--bg-color);
         }
 
         html.dark {
@@ -56,6 +58,8 @@
             --button-text-color: #ffffff; 
             --button-border-color: var(--primary-color);
             --project-note-text-color: var(--text-muted-color);
+            --chatbot-input-bg: var(--card-bg-color);
+            --chatbot-response-bg: #374151; /* gray-700 for dark mode response area */
         }
 
         html {
@@ -145,21 +149,45 @@
         #backToTopBtn:hover { background-color: var(--primary-hover-color); }
         #backToTopBtn.show { @apply block opacity-100; }
 
+        .typewriter { /* Container do typewriter */
+            display: inline-block; /* Para que o text-center do pai funcione */
+            /* Adicione um padding pequeno se necessário para o cursor não colar nas bordas em telas muito pequenas */
+            padding-left: 2px;
+            padding-right: 2px;
+        }
         .typewriter h2 {
             color: var(--text-muted-color);
             overflow: hidden; 
             border-right: .15em solid var(--typewriter-cursor-color); 
             white-space: nowrap; 
-            margin: 0 auto; 
+            margin: 0 auto; /* Centraliza o texto dentro do seu max-width */
             letter-spacing: .05em; 
             animation: 
-                typing 4s steps(45, end), 
+                typing 4s steps(45, end) forwards, /* Adicionado 'forwards' para manter o estado final */
                 blink-caret .75s step-end infinite;
-            max-width: max-content; 
+            max-width: max-content; /* Essencial para que a largura seja baseada no conteúdo */
+            /* text-lg md:text-xl são classes Tailwind, aplicadas no HTML */
         }
+
+        /* Ajuste para telas muito pequenas */
+        @media (max-width: 400px) { /* Ponto de quebra ajustado, teste com diferentes valores */
+            .typewriter h2 {
+                font-size: 0.875rem; /* Equivalente a text-sm do Tailwind */
+                letter-spacing: 0.025em; /* Espaçamento entre letras um pouco menor */
+                /* A animação de steps(45) deve continuar ok, pois o texto em si não muda */
+            }
+        }
+         @media (max-width: 350px) { 
+            .typewriter h2 {
+                font-size: 0.75rem; /* Equivalente a text-xs do Tailwind */
+                letter-spacing: 0.02em; 
+            }
+        }
+
+
         @keyframes typing {
             from { width: 0 }
-            to { width: 100% }
+            to { width: 100% } /* 100% do max-content */
         }
         @keyframes blink-caret {
             from, to { border-color: transparent }
@@ -195,7 +223,6 @@
         .project-note-footer i {
             color: var(--primary-color);
         }
-
 
         @page {
             size: A4; 
@@ -258,13 +285,11 @@
             #soft-skills-list .soft-skill-tag:not(:last-child)::after { margin-right: 0.25rem; color: var(--text-muted-color) !important; }
             a { color: var(--link-color) !important; text-decoration: none !important; }
             .contact-info i { color: var(--icon-color) !important; }
-            /* Removido .project-note-footer da lista de ocultos para impressão */
             .no-print, #backToTopBtn, .theme-toggle-btn, .lang-toggle-btn, #dynamicGreeting { display: none !important; } 
+            .project-note-footer { display: block !important; } 
             .revealable { opacity: 1 !important; transform: translateY(0) !important; }
             .typewriter h2 { animation: none !important; border-right: none !important; white-space: normal !important; width: auto !important; color: var(--text-muted-color) !important; }
             footer { border-top-color: var(--footer-border-color) !important; }
-            /* Garante que a nota do projeto seja display: block na impressão para ocupar sua linha */
-            .project-note-footer { display: block !important; } 
             html[lang="pt-BR"] .lang-pt { display: inline !important; }
             html[lang="pt-BR"] .lang-en { display: none !important; }
             html[lang="en"] .lang-en { display: inline !important; }
@@ -522,13 +547,13 @@
             <p class="text-sm" style="color: var(--text-muted-color);" data-lang="pt">Disponível para oportunidades em Inteligência Artificial, automação e desenvolvimento Full-Stack.</p>
             <p class="text-sm" style="color: var(--text-muted-color);" data-lang="en">Available for opportunities in Artificial Intelligence, automation, and Full-Stack development.</p>
             
-            <br><div class="project-note-footer revealable"> <p class="mb-2">
+            <div class="project-note-footer revealable"> <p class="mb-2">
                     <span class="lang-pt"><i class="fas fa-laptop-code mr-2"></i>Este currículo é uma aplicação web interativa, construída do zero com HTML, CSS (Tailwind) e JavaScript.</span>
                     <span class="lang-en"><i class="fas fa-laptop-code mr-2"></i>This resume is an interactive web application, built from scratch with HTML, CSS (Tailwind), and JavaScript.</span><br>
                 </p>
                 <p>
                     <span class="lang-pt">Curioso para ver os bastidores? Explore o código-fonte no meu <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="Ver código-fonte do currículo no GitHub">GitHub</a>!</span>
-                    <span class="lang-en">Curious to see behind the scenes? Explore the source code on my <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="View resume source code on GitHub">GitHub</a>!</span><br>
+                    <span class="lang-en">Curious to see behind the scenes? Explore the source code on my <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="View resume source code on GitHub">GitHub</a>!</span>
                 </p>
             </div>
         </footer>
@@ -544,6 +569,8 @@
             const themeToggleBtn = document.getElementById('themeToggleBtn');
             const langToggleBtn = document.getElementById('langToggleBtn');
             const dynamicGreetingEl = document.getElementById('dynamicGreeting');
+            
+            let currentLang = localStorage.getItem('language') || 'pt-BR';
 
             // --- Modo Claro/Escuro ---
             const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -551,55 +578,61 @@
             htmlEl.classList.add(currentTheme);
             
             function updateThemeButtonIcon(theme) {
-                if (theme === 'dark') {
-                    themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Mudar para modo claro</span>';
-                } else {
-                    themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>';
+                if (themeToggleBtn) { 
+                    if (theme === 'dark') {
+                        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Mudar para modo claro</span>';
+                    } else {
+                        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>';
+                    }
                 }
             }
             updateThemeButtonIcon(currentTheme);
 
-
-            themeToggleBtn.addEventListener('click', () => {
-                let newTheme;
-                if (htmlEl.classList.contains('dark')) {
-                    htmlEl.classList.remove('dark');
-                    htmlEl.classList.add('light');
-                    newTheme = 'light';
-                } else {
-                    htmlEl.classList.remove('light');
-                    htmlEl.classList.add('dark');
-                    newTheme = 'dark';
-                }
-                localStorage.setItem('theme', newTheme);
-                updateThemeButtonIcon(newTheme);
-            });
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    let newTheme;
+                    if (htmlEl.classList.contains('dark')) {
+                        htmlEl.classList.remove('dark');
+                        htmlEl.classList.add('light');
+                        newTheme = 'light';
+                    } else {
+                        htmlEl.classList.remove('light');
+                        htmlEl.classList.add('dark');
+                        newTheme = 'dark';
+                    }
+                    localStorage.setItem('theme', newTheme);
+                    updateThemeButtonIcon(newTheme);
+                });
+            }
 
             // --- Troca de Idioma ---
-            const currentLang = localStorage.getItem('language') || 'pt-BR';
             htmlEl.setAttribute('lang', currentLang);
             
             function updateLangToggleBtnText(lang) {
-                const langPtSpan = langToggleBtn.querySelector('.lang-pt');
-                const langEnSpan = langToggleBtn.querySelector('.lang-en');
-                if (lang === 'pt-BR') {
-                    if(langPtSpan) langPtSpan.style.display = 'inline';
-                    if(langEnSpan) langEnSpan.style.display = 'none';
-                } else { // 'en'
-                    if(langPtSpan) langPtSpan.style.display = 'none';
-                    if(langEnSpan) langEnSpan.style.display = 'inline';
+                 if (langToggleBtn) { 
+                    const langPtSpan = langToggleBtn.querySelector('.lang-pt');
+                    const langEnSpan = langToggleBtn.querySelector('.lang-en');
+                    if (lang === 'pt-BR') {
+                        if(langPtSpan) langPtSpan.style.display = 'inline';
+                        if(langEnSpan) langEnSpan.style.display = 'none';
+                    } else { // 'en'
+                        if(langPtSpan) langPtSpan.style.display = 'none';
+                        if(langEnSpan) langEnSpan.style.display = 'inline';
+                    }
                 }
             }
             updateLangToggleBtnText(currentLang);
 
-
-            langToggleBtn.addEventListener('click', () => {
-                let newLang = htmlEl.getAttribute('lang') === 'pt-BR' ? 'en' : 'pt-BR';
-                htmlEl.setAttribute('lang', newLang);
-                localStorage.setItem('language', newLang);
-                updateLangToggleBtnText(newLang);
-            });
-
+            if (langToggleBtn) {
+                langToggleBtn.addEventListener('click', () => {
+                    let newLangValue = htmlEl.getAttribute('lang') === 'pt-BR' ? 'en' : 'pt-BR';
+                    htmlEl.setAttribute('lang', newLangValue);
+                    localStorage.setItem('language', newLangValue);
+                    updateLangToggleBtnText(newLangValue);
+                    currentLang = newLangValue; 
+                });
+            }
+            
             // --- Mensagem Dinâmica ---
             const hour = new Date().getHours();
             let greeting = "";
