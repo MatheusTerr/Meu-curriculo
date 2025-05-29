@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR" class="light"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Currículo de Matheus Queiroz Batista, estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial.">
@@ -9,294 +8,642 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #f9fafb; 
+            --card-bg-color: #ffffff; 
+            --text-color: #1f2937; 
+            --text-muted-color: #6b7280; 
+            --primary-color: #0ea5e9; 
+            --primary-hover-color: #0284c7; 
+            --primary-border-color: #0ea5e9; 
+            --section-title-color: #0369a1; 
+            --skill-tag-bg: #e0f2fe; 
+            --skill-tag-text: #0ea5e9; 
+            --soft-skill-tag-bg: #d1fae5; 
+            --soft-skill-tag-text: #059669; 
+            --nav-bg-color: #ffffff; 
+            --border-color: #e5e7eb; 
+            --link-color: var(--primary-color);
+            --link-hover-color: var(--primary-hover-color);
+            --icon-color: var(--text-muted-color);
+            --typewriter-cursor-color: var(--primary-color);
+            --footer-border-color: var(--border-color);
+            --button-text-color: #ffffff; 
+            --button-border-color: var(--primary-color); 
+            --project-note-text-color: var(--text-muted-color);
+        }
+
+        html.dark {
+            --bg-color: #111827; 
+            --card-bg-color: #1f2937; 
+            --text-color: #d1d5db; 
+            --text-muted-color: #9ca3af; 
+            --primary-color: #38bdf8; 
+            --primary-hover-color: #0ea5e9; 
+            --primary-border-color: #38bdf8; 
+            --section-title-color: #7dd3fc; 
+            --skill-tag-bg: #374151; 
+            --skill-tag-text: #7dd3fc; 
+            --soft-skill-tag-bg: #374151; 
+            --soft-skill-tag-text: #6ee7b7; 
+            --nav-bg-color: #1f2937; 
+            --border-color: #4b5563; 
+            --link-color: var(--primary-color);
+            --link-hover-color: var(--primary-hover-color);
+            --icon-color: var(--text-muted-color);
+            --typewriter-cursor-color: var(--primary-color);
+            --footer-border-color: var(--border-color);
+            --button-text-color: #ffffff; 
+            --button-border-color: var(--primary-color);
+            --project-note-text-color: var(--text-muted-color);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            color: #374151; /* gray-700 */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .container-main { /* Renamed from .container to avoid conflict if Tailwind had a .container class with different props */
+        .container-main {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
+            background-color: var(--card-bg-color);
+            transition: background-color 0.3s ease;
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
+        }
+        nav {
+            background-color: var(--nav-bg-color);
+            transition: background-color 0.3s ease;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06); 
         }
         .section-title {
-            @apply text-xl font-semibold text-sky-700 border-b-2 border-sky-600 pb-2 mb-4;
+            color: var(--section-title-color);
+            border-bottom-color: var(--primary-border-color);
+            @apply text-xl font-semibold pb-2 mb-4 border-b-2;
         }
         .subsection-title {
-            @apply text-lg font-medium text-sky-600 mt-4 mb-3;
+            color: var(--primary-color);
+            @apply text-lg font-medium mt-4 mb-3;
         }
         .contact-info a {
-            @apply text-sky-600 hover:text-sky-800 transition-colors;
+            color: var(--link-color);
         }
-        .job-header { /* For grouping job title and company */
-            @apply mb-1;
+        .contact-info a:hover {
+            color: var(--link-hover-color);
         }
-        .job-title {
-            @apply text-lg font-semibold text-gray-800;
+        .contact-info i {
+            color: var(--icon-color);
         }
-        .company-name {
-            @apply text-md font-medium text-gray-600;
+        .job-header { @apply mb-1; }
+        .job-title { 
+            @apply text-lg font-semibold; 
         }
-        .date-range {
-            @apply text-sm text-gray-500 italic;
-        }
+        .company-name { color: var(--text-muted-color); @apply text-md font-medium; }
+        .date-range { color: var(--text-muted-color); @apply text-sm italic; }
+        
         .skill-tag {
-            @apply bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105; 
+            background-color: var(--skill-tag-bg);
+            color: var(--skill-tag-text);
+            @apply px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105 duration-200 ease-in-out; 
         }
         .soft-skill-tag {
-            @apply bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105; 
+            background-color: var(--soft-skill-tag-bg);
+            color: var(--soft-skill-tag-text);
+            @apply px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105 duration-200 ease-in-out; 
         }
         
         #hard-skills-list .skill-tag:not(:last-child)::after,
         #soft-skills-list .soft-skill-tag:not(:last-child)::after {
             content: ",";
-            color: #4B5563; 
+            color: var(--text-muted-color); 
             display: inline; 
+            margin-left: 0.1rem; 
             margin-right: 0.5rem; 
         }
 
-        .project-link {
-            @apply text-sky-600 hover:underline;
+        .project-link { color: var(--link-color); }
+        .project-link:hover { text-decoration-color: var(--link-hover-color); @apply underline; }
+        .project-title-icon { color: var(--primary-color); @apply mr-2; }
+        .list-disc { color: var(--text-muted-color); } 
+
+        .revealable {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .project-title-icon {
-            @apply mr-2 text-sky-600;
+        .revealable.revealed { opacity: 1; transform: translateY(0); }
+
+        #backToTopBtn {
+            background-color: var(--primary-color);
+            @apply hidden fixed bottom-5 right-5 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50;
+        }
+        #backToTopBtn:hover { background-color: var(--primary-hover-color); }
+        #backToTopBtn.show { @apply block opacity-100; }
+
+        .typewriter h2 {
+            color: var(--text-muted-color);
+            overflow: hidden; 
+            border-right: .15em solid var(--typewriter-cursor-color); 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .05em; 
+            animation: 
+                typing 4s steps(45, end), 
+                blink-caret .75s step-end infinite;
+            max-width: max-content; 
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--typewriter-cursor-color); }
+        }
+        
+        .lang-en, .lang-pt { display: none; }
+        html[lang="pt-BR"] .lang-pt { display: inline; }
+        html[lang="en"] .lang-en { display: inline; }
+        html[lang="pt-BR"] [data-lang="pt"],
+        html[lang="en"] [data-lang="en"] {
+            display: block; 
+        }
+         html[lang="pt-BR"] [data-lang="en"],
+         html[lang="en"] [data-lang="pt"] {
+            display: none;
+        }
+        footer {
+            border-top-color: var(--footer-border-color);
+        }
+        .project-note-footer { 
+            color: var(--project-note-text-color);
+            @apply text-center text-xs mt-4 pt-4; 
+        }
+        .project-note-footer a {
+            color: var(--link-color);
+            font-weight: 500; 
+        }
+         .project-note-footer a:hover {
+            color: var(--link-hover-color);
+            @apply underline;
+        }
+        .project-note-footer i {
+            color: var(--primary-color);
+        }
+
+
+        @page {
+            size: A4; 
+            margin: 0.75in; 
+            @top-left { content: ""; }
+            @top-center { content: ""; }
+            @top-right { content: ""; }
+            @bottom-left { content: ""; }
+            @bottom-center { content: ""; }
+            @bottom-right { content: ""; }
         }
 
         @media print {
+            html { scroll-behavior: auto; }
+            :root, html.dark { 
+                --bg-color: #ffffff;
+                --card-bg-color: #ffffff;
+                --text-color: #000000; 
+                --text-muted-color: #333333;
+                --primary-color: #005a87; 
+                --primary-border-color: #005a87;
+                --section-title-color: #00456A;
+                --skill-tag-bg: #e0f2fe; 
+                --skill-tag-text: #005a87; 
+                --soft-skill-tag-bg: #d1fae5; 
+                --soft-skill-tag-text: #047857; 
+                --nav-bg-color: #ffffff;
+                --border-color: #cccccc;
+                --link-color: #005a87;
+                --icon-color: #333333;
+                --typewriter-cursor-color: transparent; 
+                --footer-border-color: #cccccc;
+                --button-border-color: transparent; 
+                --button-text-color: #000000; 
+                --project-note-text-color: #333333;
+            }
             body {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important; 
                 font-size: 10pt;
+                background-color: var(--bg-color) !important;
+                color: var(--text-color) !important;
+                margin: 0; 
             }
-            .container-main {
-                padding: 0;
-                margin: 0;
-                max-width: 100%;
-                box-shadow: none;
+            .container-main { 
+                padding: 0 !important; 
+                margin: 0 !important; 
+                max-width: 100% !important; 
+                box-shadow: none !important; 
+                background-color: var(--card-bg-color) !important; 
+                border-radius: 0 !important; 
             }
-            .section-title {
-                @apply text-xl font-semibold text-sky-700 border-b-2 border-sky-600 pb-1 mb-2;
-            }
-            .subsection-title {
-                @apply text-lg font-medium text-sky-600 mt-3 mb-2;
-            }
-            .skill-tag, .soft-skill-tag {
-                @apply px-2 py-0.5 rounded-full text-xs mb-1;
-            }
-            .skill-tag { @apply bg-sky-100 text-sky-700; }
-            .soft-skill-tag { @apply bg-emerald-100 text-emerald-700; }
-            
+            nav { box-shadow: none !important; }
+            .section-title { color: var(--section-title-color) !important; border-bottom-color: var(--primary-border-color) !important; @apply text-xl font-semibold pb-1 mb-2; }
+            .subsection-title { color: var(--primary-color) !important; @apply text-lg font-medium mt-3 mb-2; }
+            .skill-tag, .soft-skill-tag { transform: none !important; @apply px-2 py-0.5 rounded-full text-xs mb-1; }
+            .skill-tag { background-color: var(--skill-tag-bg) !important; color: var(--skill-tag-text) !important; }
+            .soft-skill-tag { background-color: var(--soft-skill-tag-bg) !important; color: var(--soft-skill-tag-text) !important; }
             #hard-skills-list .skill-tag:not(:last-child)::after,
-            #soft-skills-list .soft-skill-tag:not(:last-child)::after {
-                margin-right: 0.25rem; 
-            }
-
-            a {
-                color: #2563eb !important;
-                text-decoration: none !important;
-            }
-            .no-print {
-                display: none !important; /* Ensure it's hidden */
-            }
+            #soft-skills-list .soft-skill-tag:not(:last-child)::after { margin-right: 0.25rem; color: var(--text-muted-color) !important; }
+            a { color: var(--link-color) !important; text-decoration: none !important; }
+            .contact-info i { color: var(--icon-color) !important; }
+            /* Removido .project-note-footer da lista de ocultos para impressão */
+            .no-print, #backToTopBtn, .theme-toggle-btn, .lang-toggle-btn, #dynamicGreeting { display: none !important; } 
+            .revealable { opacity: 1 !important; transform: translateY(0) !important; }
+            .typewriter h2 { animation: none !important; border-right: none !important; white-space: normal !important; width: auto !important; color: var(--text-muted-color) !important; }
+            footer { border-top-color: var(--footer-border-color) !important; }
+            /* Garante que a nota do projeto seja display: block na impressão para ocupar sua linha */
+            .project-note-footer { display: block !important; } 
+            html[lang="pt-BR"] .lang-pt { display: inline !important; }
+            html[lang="pt-BR"] .lang-en { display: none !important; }
+            html[lang="en"] .lang-en { display: inline !important; }
+            html[lang="en"] .lang-pt { display: none !important; }
         }
     </style>
 </head>
-<body class="bg-gray-100">
-    <nav class="no-print py-4 px-6 text-right bg-gray-50">
-        <button onclick="window.print()" aria-label="Imprimir ou Salvar Currículo como PDF" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out">
-            <i class="fas fa-print mr-2" aria-hidden="true"></i>Imprimir / Salvar PDF
-        </button>
+<body>
+    <nav class="no-print py-3 px-6 sticky top-0 z-40 flex justify-between items-center">
+        <div id="dynamicGreeting" class="text-sm" title="Saudação dinâmica baseada na hora do dia" style="color: var(--text-muted-color);"></div>
+        <div class="flex items-center space-x-3">
+            <button id="langToggleBtn" 
+                    title="Alternar Idioma (PT/EN)"
+                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
+                <span class="lang-pt">EN</span><span class="lang-en">PT</span>
+            </button>
+            <button id="themeToggleBtn" 
+                    title="Alternar Modo Claro/Escuro"
+                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
+                <i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>
+            </button>
+            <button onclick="window.print()" 
+                    aria-label="Imprimir ou Salvar Currículo como PDF" 
+                    class="font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out" 
+                    style="background-color: var(--primary-color); color: var(--button-text-color);" 
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)';" 
+                    onmouseout="this.style.backgroundColor='var(--primary-color)';">
+                <i class="fas fa-print mr-2" aria-hidden="true"></i><span class="lang-pt">Imprimir</span><span class="lang-en">Print</span> / PDF
+            </button>
+        </div>
     </nav>
-    <main class="container-main bg-white shadow-lg rounded-lg p-6 md:p-10 my-8">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-sky-700">Matheus Queiroz Batista</h1>
-            <p class="text-md text-gray-600 mt-1">Guarulhos, SP – Brasil</p>
+    <main class="container-main p-6 md:p-10 my-8">
+        <header class="text-center mb-8 revealable">
+            <h1 class="text-4xl font-bold" style="color: var(--section-title-color);">Matheus Queiroz Batista</h1>
+            <div class="typewriter mx-auto mt-2"> 
+                 <h2 class="text-lg md:text-xl"><span class="lang-pt">Desenvolvedor | Estudante | Explorador de IA</span><span class="lang-en">Developer | Student | AI Explorer</span></h2>
+            </div>
+            <p class="text-md mt-3" style="color: var(--text-muted-color);"><span class="lang-pt">Guarulhos, SP – Brasil</span><span class="lang-en">Guarulhos, SP – Brazil</span></p>
             <div class="contact-info mt-4 space-x-2 md:space-x-4 text-sm md:text-base">
-                <a href="mailto:matheusqueirozterr@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
+                <a href="mailto:matheusqueirozterr@gmail.com" title="Enviar e-mail para Matheus"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
                 <span>|</span>
-                <a href="tel:+5511959074638"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
+                <a href="tel:+5511959074638" title="Ligar para Matheus"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
                 <br class="md:hidden"> <span class="hidden md:inline">|</span>
-                <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                 <span>|</span>
-                <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
             </div>
         </header>
 
-        <section class="mb-8" aria-labelledby="perfil-profissional-heading">
-            <h2 id="perfil-profissional-heading" class="section-title">PERFIL PROFISSIONAL</h2>
-            <div id="perfil-profissional-content">
-                <p class="text-gray-700 leading-relaxed">
+        <section class="mb-8 revealable" aria-labelledby="perfil-profissional-heading">
+            <h2 id="perfil-profissional-heading" class="section-title"><span class="lang-pt">PERFIL PROFISSIONAL</span><span class="lang-en">PROFESSIONAL PROFILE</span></h2>
+            <div id="perfil-profissional-content" class="leading-relaxed space-y-3">
+                <p data-lang="pt">
                     Estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial. Crio aplicações web modernas e interfaces intuitivas, que aumentam a adoção e o engajamento de usuários. Automatizo processos repetitivos com Python, n8n e scripts customizados, reduzindo em até 50% o tempo gasto em tarefas manuais. Domino frameworks como React, Angular, Node.js e Express, aplicando melhores práticas de testes e deploy.
                 </p>
-                <p class="text-gray-700 leading-relaxed mt-3">
+                <p data-lang="pt">
                     Em projetos de IA com TensorFlow e PyTorch, desenvolvi modelos preditivos e sistemas inteligentes, que elevaram a assertividade de análises de dados em mais de 80%. Como assessor na LC Candido Segurança (de novembro de 2024 a maio de 2025), implementei automações e APIs RESTful que aumentaram a produtividade da equipe em 25%, além de criar dashboards interativos para monitoramento de KPIs em grandes eventos e para apoiar decisões estratégicas.
+                </p>
+                <p data-lang="en">
+                    Computer Science student focusing on Full-Stack Development, UX/UI, and Artificial Intelligence. I create modern web applications and intuitive interfaces that increase user adoption and engagement. I automate repetitive processes with Python, n8n, and custom scripts, reducing time spent on manual tasks by up to 50%. I master frameworks like React, Angular, Node.js, and Express, applying best practices for testing and deployment.
+                </p>
+                <p data-lang="en">
+                    In AI projects with TensorFlow and PyTorch, I developed predictive models and intelligent systems that improved data analysis accuracy by over 80%. As an advisor at LC Candido Segurança (November 2024–May 2025), I implemented automations and RESTful APIs that increased team productivity by 25%, in addition to creating interactive dashboards for KPI monitoring at major events and supporting strategic decisions.
                 </p>
             </div>
         </section>
 
-        <section class="mb-8" aria-labelledby="skills-heading">
+        <section class="mb-8 revealable" aria-labelledby="skills-heading">
             <h2 id="skills-heading" class="section-title">Hard Skills & Soft Skills</h2>
             
             <div aria-labelledby="hard-skills-subheading">
-                <h3 id="hard-skills-subheading" class="subsection-title"><i class="fas fa-cogs mr-2 text-sky-500" aria-hidden="true"></i>Hard Skills</h3>
+                <h3 id="hard-skills-subheading" class="subsection-title"><i class="fas fa-cogs mr-2" style="color: var(--primary-color);" aria-hidden="true"></i>Hard Skills</h3>
                 <div id="hard-skills-list" class="flex flex-wrap items-center">
-                    <span class="skill-tag mb-2">.NET 8</span>
-                    <span class="skill-tag mb-2">C#</span>
-                    <span class="skill-tag mb-2">Node.js (Express.js)</span>
-                    <span class="skill-tag mb-2">Angular</span>
-                    <span class="skill-tag mb-2">React</span>
-                    <span class="skill-tag mb-2">EJS</span>
-                    <span class="skill-tag mb-2">Tailwind CSS</span>
-                    <span class="skill-tag mb-2">RESTful APIs</span>
-                    <span class="skill-tag mb-2">n8n workflows</span>
-                    <span class="skill-tag mb-2">Python scripting</span>
-                    <span class="skill-tag mb-2">Automação de pipelines</span>
-                    <span class="skill-tag mb-2">PostgreSQL</span>
-                    <span class="skill-tag mb-2">SQL Server</span>
-                    <span class="skill-tag mb-2">Docker</span>
-                    <span class="skill-tag mb-2">Kubernetes</span>
-                    <span class="skill-tag mb-2">Git</span>
-                    <span class="skill-tag mb-2">CI/CD</span>
-                    <span class="skill-tag mb-2">BCRYPT</span>
-                    <span class="skill-tag mb-2">JWT</span>
-                    <span class="skill-tag mb-2">OWASP</span>
-                    <span class="skill-tag mb-2">DevSecOps</span>
-                    <span class="skill-tag mb-2">Python (IA)</span>
-                    <span class="skill-tag mb-2">TensorFlow</span>
-                    <span class="skill-tag mb-2">PyTorch</span>
-                    <span class="skill-tag mb-2">scikit‑learn</span>
-                    <span class="skill-tag mb-2">Pandas</span>
-                    <span class="skill-tag mb-2">Pré‑processamento de Dados</span>
-                    <span class="skill-tag mb-2">PNL</span>
-                    <span class="skill-tag mb-2">Figma</span>
-                    <span class="skill-tag mb-2">Adobe XD</span>
-                    <span class="skill-tag mb-2">AWS (Lambda, S3)</span>
-                    <span class="skill-tag mb-2">Oracle Cloud</span>
-                    <span class="skill-tag mb-2">HubSpot CRM</span>
-                    <span class="skill-tag mb-2">Excel Avançado</span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">.NET 8</span><span class="lang-en">.NET 8</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">C#</span><span class="lang-en">C#</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Node.js (Express.js)</span><span class="lang-en">Node.js (Express.js)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Angular</span><span class="lang-en">Angular</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">React</span><span class="lang-en">React</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">EJS</span><span class="lang-en">EJS</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Tailwind CSS</span><span class="lang-en">Tailwind CSS</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">RESTful APIs</span><span class="lang-en">RESTful APIs</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">n8n workflows</span><span class="lang-en">n8n workflows</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Python scripting</span><span class="lang-en">Python scripting</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Automação de pipelines</span><span class="lang-en">Pipeline Automation</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PostgreSQL</span><span class="lang-en">PostgreSQL</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">SQL Server</span><span class="lang-en">SQL Server</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Docker</span><span class="lang-en">Docker</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Kubernetes</span><span class="lang-en">Kubernetes</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Git</span><span class="lang-en">Git</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">CI/CD</span><span class="lang-en">CI/CD</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">BCRYPT</span><span class="lang-en">BCRYPT</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">JWT</span><span class="lang-en">JWT</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">OWASP</span><span class="lang-en">OWASP</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">DevSecOps</span><span class="lang-en">DevSecOps</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Python (IA)</span><span class="lang-en">Python (AI)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">TensorFlow</span><span class="lang-en">TensorFlow</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PyTorch</span><span class="lang-en">PyTorch</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">scikit‑learn</span><span class="lang-en">scikit‑learn</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Pandas</span><span class="lang-en">Pandas</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Pré‑processamento de Dados</span><span class="lang-en">Data Preprocessing</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PNL</span><span class="lang-en">NLP</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Figma</span><span class="lang-en">Figma</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Adobe XD</span><span class="lang-en">Adobe XD</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">AWS (Lambda, S3)</span><span class="lang-en">AWS (Lambda, S3)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Oracle Cloud</span><span class="lang-en">Oracle Cloud</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">HubSpot CRM</span><span class="lang-en">HubSpot CRM</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Excel Avançado</span><span class="lang-en">Advanced Excel</span></span>
                 </div>
             </div>
 
             <div class="mt-6" aria-labelledby="soft-skills-subheading">
-                <h3 id="soft-skills-subheading" class="subsection-title"><i class="fas fa-users mr-2 text-emerald-500" aria-hidden="true"></i>Soft Skills</h3>
+                <h3 id="soft-skills-subheading" class="subsection-title"><i class="fas fa-users mr-2" style="color: var(--soft-skill-tag-text);" aria-hidden="true"></i>Soft Skills</h3>
                 <div id="soft-skills-list" class="flex flex-wrap items-center">
-                    <span class="soft-skill-tag mb-2">Resolução de problemas</span>
-                    <span class="soft-skill-tag mb-2">Pensamento analítico</span>
-                    <span class="soft-skill-tag mb-2">Comunicação clara</span>
-                    <span class="soft-skill-tag mb-2">Colaboração</span>
-                    <span class="soft-skill-tag mb-2">Adaptabilidade</span>
-                    <span class="soft-skill-tag mb-2">Liderança</span>
-                    <span class="soft-skill-tag mb-2">Princípios de usabilidade</span>
-                    <span class="soft-skill-tag mb-2">Acessibilidade</span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Resolução de problemas</span><span class="lang-en">Problem Solving</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Pensamento analítico</span><span class="lang-en">Analytical Thinking</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Comunicação clara</span><span class="lang-en">Clear Communication</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Colaboração</span><span class="lang-en">Collaboration</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Adaptabilidade</span><span class="lang-en">Adaptability</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Liderança</span><span class="lang-en">Leadership</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Princípios de usabilidade</span><span class="lang-en">Usability Principles</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Acessibilidade</span><span class="lang-en">Accessibility</span></span>
                 </div>
             </div>
         </section>
 
-        <section class="mb-8" aria-labelledby="experiencia-profissional-heading">
-            <h2 id="experiencia-profissional-heading" class="section-title">EXPERIÊNCIA PROFISSIONAL</h2>
+        <section class="mb-8 revealable" aria-labelledby="experiencia-profissional-heading">
+            <h2 id="experiencia-profissional-heading" class="section-title"><span class="lang-pt">EXPERIÊNCIA PROFISSIONAL</span><span class="lang-en">PROFESSIONAL EXPERIENCE</span></h2>
             <div class="mb-6">
                 <header class="job-header">
-                    <h3 class="job-title">Assessor Técnico</h3>
+                    <h3 class="job-title"><span class="lang-pt">Assessor Técnico</span><span class="lang-en">Technical Advisor</span></h3>
                     <p class="company-name">LC Candido Segurança</p>
                 </header>
-                <p class="date-range">Novembro de 2024 – Maio de 2025</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>Estruturei banco de dados em PostgreSQL e criei APIs RESTful com .NET 8, para gestão de contratações e pagamentos.</li>
-                    <li>Desenvolvi automação em Python e workflows n8n para triagem de candidatos, elevando a produtividade da equipe em 25%.</li>
-                    <li>Implementei dashboards interativos em Power BI, para acompanhamento de performance em eventos como BSOP e Oracle CloudWorld.</li>
+                <p class="date-range"><span class="lang-pt">Novembro de 2024 – Maio de 2025</span><span class="lang-en">November 2024 – May 2025</span></p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">Estruturei banco de dados em PostgreSQL e criei APIs RESTful com .NET 8, para gestão de contratações e pagamentos.</li>
+                    <li data-lang="en">Structured PostgreSQL databases and created RESTful APIs with .NET 8 for hiring and payment management.</li>
+                    <li data-lang="pt">Desenvolvi automação em Python e workflows n8n para triagem de candidatos, elevando a produtividade da equipe em 25%.</li>
+                    <li data-lang="en">Developed Python automation and n8n workflows for candidate screening, increasing team productivity by 25%.</li>
+                    <li data-lang="pt">Implementei dashboards interativos em Power BI, para acompanhamento de performance em eventos como BSOP e Oracle CloudWorld.</li>
+                    <li data-lang="en">Implemented interactive dashboards in Power BI for performance tracking at events like BSOP and Oracle CloudWorld.</li>
                 </ul>
             </div>
             <div class="mb-6">
                 <header class="job-header">
-                    <h3 class="job-title">Estagiário de Tecnologia</h3>
+                    <h3 class="job-title"><span class="lang-pt">Estagiário de Tecnologia</span><span class="lang-en">Technology Intern</span></h3>
                     <p class="company-name">Banco Santander</p>
                 </header>
-                <p class="date-range">Janeiro de 2024 – Agosto de 2024</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>Modelei e implementei automação de processos com Python e n8n, reduzindo tarefas manuais em 50%.</li>
-                    <li>Desenvolvi rotinas de IA leve para análise de dados de clientes e segmentação preditiva no HubSpot CRM.</li>
-                    <li>Criei dashboards avançados em Excel com VBA e Power Query, para monitoramento de KPIs operacionais.</li>
-                    <li>Integrei sistemas internos via APIs RESTful (Express.js) e mapeamento de processos ETL.</li>
+                <p class="date-range"><span class="lang-pt">Janeiro de 2024 – Agosto de 2024</span><span class="lang-en">January 2024 – August 2024</span></p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">Modelei e implementei automação de processos com Python e n8n, reduzindo tarefas manuais em 50%.</li>
+                    <li data-lang="en">Modeled and implemented process automation with Python and n8n, reducing manual tasks by 50%.</li>
+                    <li data-lang="pt">Desenvolvi rotinas de IA leve para análise de dados de clientes e segmentação preditiva no HubSpot CRM.</li>
+                    <li data-lang="en">Developed light AI routines for customer data analysis and predictive segmentation in HubSpot CRM.</li>
+                    <li data-lang="pt">Criei dashboards avançados em Excel com VBA e Power Query, para monitoramento de KPIs operacionais.</li>
+                    <li data-lang="en">Created advanced Excel dashboards with VBA and Power Query for operational KPI monitoring.</li>
+                    <li data-lang="pt">Integrei sistemas internos via APIs RESTful (Express.js) e mapeamento de processos ETL.</li>
+                    <li data-lang="en">Integrated internal systems via RESTful APIs (Express.js) and ETL process mapping.</li>
                 </ul>
             </div>
             <div>
                 <header class="job-header">
-                    <h3 class="job-title">Jovem Aprendiz – Atendimento ao Cliente</h3>
+                    <h3 class="job-title"><span class="lang-pt">Jovem Aprendiz – Atendimento ao Cliente</span><span class="lang-en">Young Apprentice – Customer Service</span></h3>
                     <p class="company-name">Porto Seguro</p>
                 </header>
-                <p class="date-range">Março de 2021 – Junho de 2022</p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>Atendi a uma média de 50 clientes por dia, mantendo um SLA de 98% de satisfação.</li>
-                    <li>Otimizei scripts de suporte em base de dados, o que reduziu em 20% o tempo de resolução de chamados.</li>
+                <p class="date-range"><span class="lang-pt">Março de 2021 – Junho de 2022</span><span class="lang-en">March 2021 – June 2022</span></p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">Atendi a uma média de 50 clientes por dia, mantendo um SLA de 98% de satisfação.</li>
+                    <li data-lang="en">Handled an average of 50 clients per day, maintaining a 98% satisfaction SLA.</li>
+                    <li data-lang="pt">Otimizei scripts de suporte em base de dados, o que reduziu em 20% o tempo de resolução de chamados.</li>
+                    <li data-lang="en">Optimized support scripts in the database, reducing call resolution time by 20%.</li>
                 </ul>
             </div>
         </section>
 
-        <section class="mb-8" aria-labelledby="projetos-destacados-heading">
-            <h2 id="projetos-destacados-heading" class="section-title">PROJETOS DESTACADOS</h2>
+        <section class="mb-8 revealable" aria-labelledby="projetos-destacados-heading">
+             <h2 id="projetos-destacados-heading" class="section-title"><span class="lang-pt">PROJETOS DESTACADOS</span><span class="lang-en">FEATURED PROJECTS</span></h2>
             <div class="mb-6">
-                <h3 class="job-title"><i class="fas fa-code project-title-icon" aria-hidden="true"></i>Mini Sistema de Blog</h3>
-                <p class="text-gray-700 mt-1">
-                    <i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/MatheusTerr/blog-express" target="_blank" rel="noopener noreferrer" class="project-link">github.com/MatheusTerr/blog-express</a>
+                <h3 class="job-title"><i class="fas fa-code project-title-icon" aria-hidden="true"></i><span class="lang-pt">Mini Sistema de Blog</span><span class="lang-en">Mini Blog System</span></h3>
+                <p class="mt-1">
+                    <i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/blog-express" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Mini Sistema de Blog no GitHub">github.com/MatheusTerr/blog-express</a>
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>API RESTful com Express.js e PostgreSQL.</li>
-                    <li>Front-end com EJS e Tailwind CSS.</li>
-                    <li>Funcionalidades CRUD e planejamento de autenticação.</li>
-                    <li>Dashboards interativos para análise de dados de visitas e engajamento.</li>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">API RESTful com Express.js e PostgreSQL.</li>
+                    <li data-lang="en">RESTful API with Express.js and PostgreSQL.</li>
+                    <li data-lang="pt">Front-end com EJS e Tailwind CSS.</li>
+                    <li data-lang="en">Front-end with EJS and Tailwind CSS.</li>
+                    <li data-lang="pt">Funcionalidades CRUD e planejamento de autenticação.</li>
+                    <li data-lang="en">CRUD functionalities and authentication planning.</li>
+                    <li data-lang="pt">Dashboards interativos para análise de dados de visitas e engajamento.</li>
+                    <li data-lang="en">Interactive dashboards for visit and engagement data analysis.</li>
                 </ul>
             </div>
             <div>
-                <h3 class="job-title"><i class="fas fa-shield-alt project-title-icon" aria-hidden="true"></i>API de Autenticação Segura (.NET 8 + PostgreSQL + BCRYPT + JWT)</h3>
-                 <p class="text-gray-700 mt-1">
-                    <i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/MatheusTerr/letshare-auth-api" target="_blank" rel="noopener noreferrer" class="project-link">github.com/MatheusTerr/letshare-auth-api</a>
+                <h3 class="job-title"><i class="fas fa-shield-alt project-title-icon" aria-hidden="true"></i><span class="lang-pt">API de Autenticação Segura (.NET 8 + PostgreSQL + BCRYPT + JWT)</span><span class="lang-en">Secure Authentication API (.NET 8 + PostgreSQL + BCRYPT + JWT)</span></h3>
+                 <p class="mt-1">
+                    <i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/letshare-auth-api" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto API de Autenticação no GitHub">github.com/MatheusTerr/letshare-auth-api</a>
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>Endpoints RESTful, hash de senhas com BCRYPT e emissão de tokens JWT.</li>
-                    <li>Dockerizado e pronto para deploy em Kubernetes, com refresh tokens seguros e logs estruturados.</li>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">Endpoints RESTful, hash de senhas com BCRYPT e emissão de tokens JWT.</li>
+                    <li data-lang="en">RESTful endpoints, password hashing with BCRYPT, and JWT token issuance.</li>
+                    <li data-lang="pt">Dockerizado e pronto para deploy em Kubernetes, com refresh tokens seguros e logs estruturados.</li>
+                    <li data-lang="en">Dockerized and ready for Kubernetes deployment, with secure refresh tokens and structured logs.</li>
                 </ul>
             </div>
         </section>
 
-        <section class="mb-8" aria-labelledby="formacao-academica-heading">
-            <h2 id="formacao-academica-heading" class="section-title">FORMAÇÃO ACADÊMICA</h2>
+        <section class="mb-8 revealable" aria-labelledby="formacao-academica-heading">
+            <h2 id="formacao-academica-heading" class="section-title"><span class="lang-pt">FORMAÇÃO ACADÊMICA</span><span class="lang-en">EDUCATION</span></h2>
             <div>
-                <h3 class="job-title">Bacharelado em Ciência da Computação</h3>
+                <h3 class="job-title"><span class="lang-pt">Bacharelado em Ciência da Computação</span><span class="lang-en">Bachelor's in Computer Science</span></h3>
                 <p class="company-name">Universidade de Guarulhos (UNG)</p>
-                <p class="date-range">Previsão de Conclusão: Junho de 2026</p>
+                <p class="date-range"><span class="lang-pt">Previsão de Conclusão: Junho de 2026</span><span class="lang-en">Expected Completion: June 2026</span></p>
             </div>
         </section>
 
-        <section class="mb-8" aria-labelledby="cursos-complementares-heading">
-            <h2 id="cursos-complementares-heading" class="section-title">CURSOS COMPLEMENTARES</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                <li>Bootcamp Full-Stack & IA (intensivo).</li>
-                <li>UX/UI Design – Figma, Adobe XD, princípios de usabilidade e acessibilidade.</li>
+        <section class="mb-8 revealable" aria-labelledby="cursos-complementares-heading">
+            <h2 id="cursos-complementares-heading" class="section-title"><span class="lang-pt">CURSOS COMPLEMENTARES</span><span class="lang-en">ADDITIONAL COURSES</span></h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li data-lang="pt">Bootcamp Full-Stack & IA (intensivo).</li>
+                <li data-lang="en">Full-Stack & AI Bootcamp (intensive).</li>
+                <li data-lang="pt">UX/UI Design – Figma, Adobe XD, princípios de usabilidade e acessibilidade.</li>
+                <li data-lang="en">UX/UI Design – Figma, Adobe XD, usability and accessibility principles.</li>
             </ul>
         </section>
 
-        <section class="mb-8" aria-labelledby="certificacoes-heading">
-            <h2 id="certificacoes-heading" class="section-title">CERTIFICAÇÕES</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                <li>HubSpot CRM Certification – HubSpot Academy.</li>
-                <li>Oracle Cloud Infrastructure Foundations – Oracle.</li>
-                <li>Machine Learning Essentials – Coursera.</li>
+        <section class="mb-8 revealable" aria-labelledby="certificacoes-heading">
+            <h2 id="certificacoes-heading" class="section-title"><span class="lang-pt">CERTIFICAÇÕES</span><span class="lang-en">CERTIFICATIONS</span></h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li data-lang="pt">HubSpot CRM Certification – HubSpot Academy.</li>
+                <li data-lang="en">HubSpot CRM Certification – HubSpot Academy.</li>
+                <li data-lang="pt">Oracle Cloud Infrastructure Foundations – Oracle.</li>
+                <li data-lang="en">Oracle Cloud Infrastructure Foundations – Oracle.</li>
+                <li data-lang="pt">Machine Learning Essentials – Coursera.</li>
+                <li data-lang="en">Machine Learning Essentials – Coursera.</li>
             </ul>
         </section>
 
-        <section aria-labelledby="idiomas-heading">
-            <h2 id="idiomas-heading" class="section-title">IDIOMAS</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                <li>Português: Nativo.</li>
-                <li>Inglês: Avançado (leitura técnica, apresentações e comunicação).</li>
+        <section class="revealable" aria-labelledby="idiomas-heading">
+            <h2 id="idiomas-heading" class="section-title"><span class="lang-pt">IDIOMAS</span><span class="lang-en">LANGUAGES</span></h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li data-lang="pt">Português: Nativo.</li>
+                <li data-lang="en">Portuguese: Native.</li>
+                <li data-lang="pt">Inglês: Avançado (leitura técnica, apresentações e comunicação).</li>
+                <li data-lang="en">English: Advanced (technical reading, presentations, and communication).</li>
             </ul>
         </section>
-
-        <footer class="text-center mt-10 pt-6 border-t border-gray-300">
-            <p class="text-sm text-gray-500">Disponível para oportunidades em Inteligência Artificial, automação e desenvolvimento Full-Stack.</p>
+        
+        <footer class="text-center mt-10 pt-6 border-t revealable">
+            <p class="text-sm" style="color: var(--text-muted-color);" data-lang="pt">Disponível para oportunidades em Inteligência Artificial, automação e desenvolvimento Full-Stack.</p>
+            <p class="text-sm" style="color: var(--text-muted-color);" data-lang="en">Available for opportunities in Artificial Intelligence, automation, and Full-Stack development.</p>
+            
+            <br><div class="project-note-footer revealable"> <p class="mb-2">
+                    <span class="lang-pt"><i class="fas fa-laptop-code mr-2"></i>Este currículo é uma aplicação web interativa, construída do zero com HTML, CSS (Tailwind) e JavaScript.</span>
+                    <span class="lang-en"><i class="fas fa-laptop-code mr-2"></i>This resume is an interactive web application, built from scratch with HTML, CSS (Tailwind), and JavaScript.</span><br>
+                </p>
+                <p>
+                    <span class="lang-pt">Curioso para ver os bastidores? Explore o código-fonte no meu <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="Ver código-fonte do currículo no GitHub">GitHub</a>!</span>
+                    <span class="lang-en">Curious to see behind the scenes? Explore the source code on my <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="View resume source code on GitHub">GitHub</a>!</span><br>
+                </p>
+            </div>
         </footer>
     </main>
+
+    <button id="backToTopBtn" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <script>
-        // Script para funcionalidade de impressão ou outros JS no futuro
+        document.addEventListener('DOMContentLoaded', function() {
+            const htmlEl = document.documentElement;
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const langToggleBtn = document.getElementById('langToggleBtn');
+            const dynamicGreetingEl = document.getElementById('dynamicGreeting');
+
+            // --- Modo Claro/Escuro ---
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            htmlEl.classList.remove('light', 'dark'); 
+            htmlEl.classList.add(currentTheme);
+            
+            function updateThemeButtonIcon(theme) {
+                if (theme === 'dark') {
+                    themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Mudar para modo claro</span>';
+                } else {
+                    themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>';
+                }
+            }
+            updateThemeButtonIcon(currentTheme);
+
+
+            themeToggleBtn.addEventListener('click', () => {
+                let newTheme;
+                if (htmlEl.classList.contains('dark')) {
+                    htmlEl.classList.remove('dark');
+                    htmlEl.classList.add('light');
+                    newTheme = 'light';
+                } else {
+                    htmlEl.classList.remove('light');
+                    htmlEl.classList.add('dark');
+                    newTheme = 'dark';
+                }
+                localStorage.setItem('theme', newTheme);
+                updateThemeButtonIcon(newTheme);
+            });
+
+            // --- Troca de Idioma ---
+            const currentLang = localStorage.getItem('language') || 'pt-BR';
+            htmlEl.setAttribute('lang', currentLang);
+            
+            function updateLangToggleBtnText(lang) {
+                const langPtSpan = langToggleBtn.querySelector('.lang-pt');
+                const langEnSpan = langToggleBtn.querySelector('.lang-en');
+                if (lang === 'pt-BR') {
+                    if(langPtSpan) langPtSpan.style.display = 'inline';
+                    if(langEnSpan) langEnSpan.style.display = 'none';
+                } else { // 'en'
+                    if(langPtSpan) langPtSpan.style.display = 'none';
+                    if(langEnSpan) langEnSpan.style.display = 'inline';
+                }
+            }
+            updateLangToggleBtnText(currentLang);
+
+
+            langToggleBtn.addEventListener('click', () => {
+                let newLang = htmlEl.getAttribute('lang') === 'pt-BR' ? 'en' : 'pt-BR';
+                htmlEl.setAttribute('lang', newLang);
+                localStorage.setItem('language', newLang);
+                updateLangToggleBtnText(newLang);
+            });
+
+            // --- Mensagem Dinâmica ---
+            const hour = new Date().getHours();
+            let greeting = "";
+            let greetingEn = "";
+            if (hour < 5) {
+                greeting = "Boa madrugada!"; greetingEn = "Good early morning!";
+            } else if (hour < 12) {
+                greeting = "Bom dia!"; greetingEn = "Good morning!";
+            } else if (hour < 18) {
+                greeting = "Boa tarde!"; greetingEn = "Good afternoon!";
+            } else {
+                greeting = "Boa noite!"; greetingEn = "Good evening!";
+            }
+            if(dynamicGreetingEl) {
+                dynamicGreetingEl.innerHTML = `<span class="lang-pt">${greeting}</span><span class="lang-en">${greetingEn}</span>`;
+            }
+
+            // --- Animação de Scroll Reveal ---
+            const revealables = document.querySelectorAll('.revealable');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            revealables.forEach(el => revealObserver.observe(el));
+
+            // --- Botão Voltar ao Topo ---
+            const backToTopButton = document.getElementById('backToTopBtn');
+            if(backToTopButton) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 200) {
+                        backToTopButton.classList.add('show');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                    }
+                });
+                backToTopButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0 }); 
+                });
+            }
+        });
     </script>
 </body>
 </html>
