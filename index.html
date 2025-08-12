@@ -1,67 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light">
-<head>
+<html lang="pt-BR" class="light"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Currículo de Matheus Queiroz Batista, estudante de Ciência da Computação com foco em Inteligência Artificial, Machine Learning e automação inteligente de processos.">
+    <meta name="description" content="Currículo de Matheus Queiroz Batista, estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial.">
     <title>Currículo - Matheus Queiroz Batista</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f9fafb;
-            --card-bg-color: #ffffff;
-            --text-color: #1f2937;
-            --text-muted-color: #6b7280;
-            --primary-color: #0ea5e9;
-            --primary-hover-color: #0284c7;
-            --primary-border-color: #0ea5e9;
-            --section-title-color: #0369a1;
-            --skill-tag-bg: #e0f2fe;
-            --skill-tag-text: #0ea5e9;
-            --soft-skill-tag-bg: #d1fae5;
-            --soft-skill-tag-text: #059669;
-            --nav-bg-color: #ffffff;
-            --border-color: #e5e7eb;
+            --bg-color: #f9fafb; 
+            --card-bg-color: #ffffff; 
+            --text-color: #1f2937; 
+            --text-muted-color: #6b7280; 
+            --primary-color: #0ea5e9; 
+            --primary-hover-color: #0284c7; 
+            --primary-border-color: #0ea5e9; 
+            --section-title-color: #0369a1; 
+            --skill-tag-bg: #e0f2fe; 
+            --skill-tag-text: #0ea5e9; 
+            --soft-skill-tag-bg: #d1fae5; 
+            --soft-skill-tag-text: #059669; 
+            --nav-bg-color: #ffffff; 
+            --border-color: #e5e7eb; 
             --link-color: var(--primary-color);
             --link-hover-color: var(--primary-hover-color);
             --icon-color: var(--text-muted-color);
             --typewriter-cursor-color: var(--primary-color);
             --footer-border-color: var(--border-color);
-            --button-text-color: #ffffff;
-            --button-border-color: var(--primary-color);
+            --button-text-color: #ffffff; 
+            --button-border-color: var(--primary-color); 
             --project-note-text-color: var(--text-muted-color);
             --chatbot-input-bg: var(--card-bg-color);
             --chatbot-response-bg: var(--bg-color);
         }
+
         html.dark {
-            --bg-color: #111827;
-            --card-bg-color: #1f2937;
-            --text-color: #d1d5db;
-            --text-muted-color: #9ca3af;
-            --primary-color: #38bdf8;
-            --primary-hover-color: #0ea5e9;
-            --primary-border-color: #38bdf8;
-            --section-title-color: #7dd3fc;
-            --skill-tag-bg: #374151;
-            --skill-tag-text: #7dd3fc;
-            --soft-skill-tag-bg: #374151;
-            --soft-skill-tag-text: #6ee7b7;
-            --nav-bg-color: #1f2937;
-            --border-color: #4b5563;
+            --bg-color: #111827; 
+            --card-bg-color: #1f2937; 
+            --text-color: #d1d5db; 
+            --text-muted-color: #9ca3af; 
+            --primary-color: #38bdf8; 
+            --primary-hover-color: #0ea5e9; 
+            --primary-border-color: #38bdf8; 
+            --section-title-color: #7dd3fc; 
+            --skill-tag-bg: #374151; 
+            --skill-tag-text: #7dd3fc; 
+            --soft-skill-tag-bg: #374151; 
+            --soft-skill-tag-text: #6ee7b7; 
+            --nav-bg-color: #1f2937; 
+            --border-color: #4b5563; 
             --link-color: var(--primary-color);
             --link-hover-color: var(--primary-hover-color);
             --icon-color: var(--text-muted-color);
             --typewriter-cursor-color: var(--primary-color);
             --footer-border-color: var(--border-color);
-            --button-text-color: #ffffff;
+            --button-text-color: #ffffff; 
             --button-border-color: var(--primary-color);
             --project-note-text-color: var(--text-muted-color);
             --chatbot-input-bg: var(--card-bg-color);
-            --chatbot-response-bg: #374151;
+            --chatbot-response-bg: #374151; /* gray-700 for dark mode response area */
         }
-        html { scroll-behavior: smooth; }
+
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -74,80 +77,264 @@
             padding: 20px;
             background-color: var(--card-bg-color);
             transition: background-color 0.3s ease;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
         }
         nav {
             background-color: var(--nav-bg-color);
             transition: background-color 0.3s ease;
-            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06); 
         }
         .section-title {
             color: var(--section-title-color);
             border-bottom-color: var(--primary-border-color);
+            @apply text-xl font-semibold pb-2 mb-4 border-b-2;
         }
-        .contact-info a { color: var(--link-color); }
-        .contact-info a:hover { color: var(--link-hover-color); }
-        .contact-info i { color: var(--icon-color); }
-        .job-title { font-weight: 600; }
-        .company-name { color: var(--text-muted-color); font-weight: 500; }
-        .date-range { color: var(--text-muted-color); font-size: 0.98em; }
+        .subsection-title {
+            color: var(--primary-color);
+            @apply text-lg font-medium mt-4 mb-3;
+        }
+        .contact-info a {
+            color: var(--link-color);
+        }
+        .contact-info a:hover {
+            color: var(--link-hover-color);
+        }
+        .contact-info i {
+            color: var(--icon-color);
+        }
+        .job-header { @apply mb-1; }
+        .job-title { 
+            @apply text-lg font-semibold; 
+        }
+        .company-name { color: var(--text-muted-color); @apply text-md font-medium; }
+        .date-range { color: var(--text-muted-color); @apply text-sm italic; }
+        
         .skill-tag {
             background-color: var(--skill-tag-bg);
             color: var(--skill-tag-text);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.95rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
+            @apply px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105 duration-200 ease-in-out; 
         }
         .soft-skill-tag {
             background-color: var(--soft-skill-tag-bg);
             color: var(--soft-skill-tag-text);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.95rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
+            @apply px-3 py-1 rounded-full text-sm mb-2 inline-block transition-transform hover:scale-105 duration-200 ease-in-out; 
         }
-        .project-link { color: var(--link-color); text-decoration: underline; font-weight: 500; }
-        .project-link:hover { color: var(--link-hover-color); }
-        .project-title-icon { color: var(--primary-color); margin-right: 0.4rem; }
-        .revealable { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        
+        #hard-skills-list .skill-tag:not(:last-child)::after,
+        #soft-skills-list .soft-skill-tag:not(:last-child)::after {
+            content: ",";
+            color: var(--text-muted-color); 
+            display: inline; 
+            margin-left: 0.1rem; 
+            margin-right: 0.5rem; 
+        }
+
+        .project-link { color: var(--link-color); }
+        .project-link:hover { text-decoration-color: var(--link-hover-color); @apply underline; }
+        .project-title-icon { color: var(--primary-color); @apply mr-2; }
+        .list-disc { color: var(--text-muted-color); } 
+
+        .revealable {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
         .revealable.revealed { opacity: 1; transform: translateY(0); }
-        .typewriter { display: inline-block; padding-left: 2px; padding-right: 2px; }
+
+        #backToTopBtn {
+            background-color: var(--primary-color);
+            @apply hidden fixed bottom-5 right-5 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50;
+        }
+        #backToTopBtn:hover { background-color: var(--primary-hover-color); }
+        #backToTopBtn.show { @apply block opacity-100; }
+
+        .typewriter { 
+            display: inline-block; 
+            padding-left: 2px;
+            padding-right: 2px;
+        }
         .typewriter h2 {
             color: var(--text-muted-color);
-            overflow: hidden;
-            border-right: .15em solid var(--typewriter-cursor-color);
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .05em;
-            animation: typing 4s steps(45, end) forwards, blink-caret .75s step-end infinite;
-            max-width: max-content;
+            overflow: hidden; 
+            border-right: .15em solid var(--typewriter-cursor-color); 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .05em; 
+            animation: 
+                typing 4s steps(45, end) forwards, 
+                blink-caret .75s step-end infinite;
+            max-width: max-content; 
         }
-        @keyframes typing { from { width: 0 } to { width: 100% } }
-        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--typewriter-cursor-color); } }
+
+        @media (max-width: 400px) { 
+            .typewriter h2 {
+                font-size: 0.875rem; 
+                letter-spacing: 0.025em; 
+            }
+        }
+         @media (max-width: 350px) { 
+            .typewriter h2 {
+                font-size: 0.75rem; 
+                letter-spacing: 0.02em; 
+            }
+        }
+
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% } 
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--typewriter-cursor-color); }
+        }
+        
         .lang-en, .lang-pt { display: none; }
         html[lang="pt-BR"] .lang-pt { display: inline; }
         html[lang="en"] .lang-en { display: inline; }
-        html[lang="pt-BR"] [data-lang="pt"], html[lang="en"] [data-lang="en"] { display: block; }
-        html[lang="pt-BR"] [data-lang="en"], html[lang="en"] [data-lang="pt"] { display: none; }
+        html[lang="pt-BR"] [data-lang="pt"],
+        html[lang="en"] [data-lang="en"] {
+            display: block; 
+        }
+         html[lang="pt-BR"] [data-lang="en"],
+         html[lang="en"] [data-lang="pt"] {
+            display: none;
+        }
+        footer {
+            border-top-color: var(--footer-border-color);
+        }
+        .project-note-footer { 
+            color: var(--project-note-text-color);
+            @apply text-center text-xs mt-4 pt-4; 
+        }
+        .project-note-footer a {
+            color: var(--link-color);
+            font-weight: 500; 
+        }
+         .project-note-footer a:hover {
+            color: var(--link-hover-color);
+            @apply underline;
+        }
+        .project-note-footer i {
+            color: var(--primary-color);
+        }
+        
+        .print-only-links {
+            display: none; 
+            color: var(--text-muted-color); 
+            @apply text-center text-xs mt-4 pt-4 border-t; 
+            border-top-color: var(--border-color); 
+        }
+        .print-only-links p {
+            @apply mb-1;
+        }
+
+
+        @page {
+            size: A4; 
+            margin: 0.75in; 
+            @top-left { content: ""; }
+            @top-center { content: ""; }
+            @top-right { content: ""; }
+            @bottom-left { content: ""; }
+            @bottom-center { content: ""; }
+            @bottom-right { content: ""; }
+        }
+
+        @media print {
+            html { scroll-behavior: auto; }
+            :root, html.dark { 
+                --bg-color: #ffffff;
+                --card-bg-color: #ffffff;
+                --text-color: #000000; 
+                --text-muted-color: #333333;
+                --primary-color: #005a87; 
+                --primary-border-color: #005a87;
+                --section-title-color: #00456A;
+                --skill-tag-bg: #e0f2fe; 
+                --skill-tag-text: #005a87; 
+                --soft-skill-tag-bg: #d1fae5; 
+                --soft-skill-tag-text: #047857; 
+                --nav-bg-color: #ffffff;
+                --border-color: #cccccc;
+                --link-color: #005a87;
+                --icon-color: #333333;
+                --typewriter-cursor-color: transparent; 
+                --footer-border-color: #cccccc;
+                --button-border-color: transparent; 
+                --button-text-color: #000000; 
+                --project-note-text-color: #333333;
+            }
+            body {
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important; 
+                font-size: 10pt;
+                background-color: var(--bg-color) !important;
+                color: var(--text-color) !important;
+                margin: 0; 
+            }
+            .container-main { 
+                padding: 0 !important; 
+                margin: 0 !important; 
+                max-width: 100% !important; 
+                box-shadow: none !important; 
+                background-color: var(--card-bg-color) !important; 
+                border-radius: 0 !important; 
+            }
+            nav { box-shadow: none !important; }
+            .section-title { color: var(--section-title-color) !important; border-bottom-color: var(--primary-border-color) !important; @apply text-xl font-semibold pb-1 mb-2; }
+            .subsection-title { color: var(--primary-color) !important; @apply text-lg font-medium mt-3 mb-2; }
+            .skill-tag, .soft-skill-tag { transform: none !important; @apply px-2 py-0.5 rounded-full text-xs mb-1; }
+            .skill-tag { background-color: var(--skill-tag-bg) !important; color: var(--skill-tag-text) !important; }
+            .soft-skill-tag { background-color: var(--soft-skill-tag-bg) !important; color: var(--soft-skill-tag-text) !important; }
+            #hard-skills-list .skill-tag:not(:last-child)::after,
+            #soft-skills-list .soft-skill-tag:not(:last-child)::after { margin-right: 0.25rem; color: var(--text-muted-color) !important; }
+            a { color: var(--link-color) !important; text-decoration: none !important; }
+            .contact-info i { color: var(--icon-color) !important; }
+            .no-print, #backToTopBtn, .theme-toggle-btn, .lang-toggle-btn, #dynamicGreeting { display: none !important; } 
+            .project-note-footer { display: block !important; } 
+            .print-only-links { 
+                display: block !important; 
+                border-top-color: var(--border-color) !important; 
+                color: var(--text-muted-color) !important; 
+            }
+            .revealable { opacity: 1 !important; transform: translateY(0) !important; }
+            .typewriter h2 { animation: none !important; border-right: none !important; white-space: normal !important; width: auto !important; color: var(--text-muted-color) !important; }
+            footer { border-top-color: var(--footer-border-color) !important; }
+            html[lang="pt-BR"] .lang-pt { display: inline !important; }
+            html[lang="pt-BR"] .lang-en { display: none !important; }
+            html[lang="en"] .lang-en { display: inline !important; }
+            html[lang="en"] .lang-pt { display: none !important; }
+        }
     </style>
 </head>
 <body>
     <nav class="no-print py-3 px-6 sticky top-0 z-40 flex justify-between items-center">
         <div id="dynamicGreeting" class="text-sm" title="Saudação dinâmica baseada na hora do dia" style="color: var(--text-muted-color);"></div>
         <div class="flex items-center space-x-3">
-            <button id="langToggleBtn" title="Alternar Idioma (PT/EN)" class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out" style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);">
+            <button id="langToggleBtn" 
+                    title="Alternar Idioma (PT/EN)"
+                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
                 <span class="lang-pt">EN</span><span class="lang-en">PT</span>
             </button>
-            <button id="themeToggleBtn" title="Alternar Modo Claro/Escuro" class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out" style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);">
+            <button id="themeToggleBtn" 
+                    title="Alternar Modo Claro/Escuro"
+                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
                 <i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>
             </button>
-            <button onclick="window.print()" aria-label="Imprimir ou Salvar Currículo como PDF" class="font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out" style="background-color: var(--primary-color); color: var(--button-text-color);">
+            <button onclick="window.print()" 
+                    aria-label="Imprimir ou Salvar Currículo como PDF" 
+                    class="font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out" 
+                    style="background-color: var(--primary-color); color: var(--button-text-color);" 
+                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)';" 
+                    onmouseout="this.style.backgroundColor='var(--primary-color)';">
                 <i class="fas fa-print mr-2" aria-hidden="true"></i><span class="lang-pt">Imprimir</span><span class="lang-en">Print</span> / PDF
             </button>
         </div>
@@ -155,18 +342,18 @@
     <main class="container-main p-6 md:p-10 my-8">
         <header class="text-center mb-8 revealable">
             <h1 class="text-4xl font-bold" style="color: var(--section-title-color);">Matheus Queiroz Batista</h1>
-            <div class="typewriter mx-auto mt-2">
-                <h2 class="text-lg md:text-xl"><span class="lang-pt">Desenvolvedor | Estudante | Explorador de IA</span><span class="lang-en">Developer | Student | AI Explorer</span></h2>
+            <div class="typewriter mx-auto mt-2"> 
+                 <h2 class="text-lg md:text-xl"><span class="lang-pt">Desenvolvedor | Estudante | Explorador de IA</span><span class="lang-en">Developer | Student | AI Explorer</span></h2>
             </div>
             <p class="text-md mt-3" style="color: var(--text-muted-color);"><span class="lang-pt">Guarulhos, SP – Brasil</span><span class="lang-en">Guarulhos, SP – Brazil</span></p>
             <div class="contact-info mt-4 space-x-2 md:space-x-4 text-sm md:text-base">
-                <a href="mailto:matheusqueirozterr@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
+                <a href="mailto:matheusqueirozterr@gmail.com" title="Enviar e-mail para Matheus"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
                 <span>|</span>
-                <a href="tel:+5511959074638"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
+                <a href="tel:+5511959074638" title="Ligar para Matheus"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
                 <br class="md:hidden"> <span class="hidden md:inline">|</span>
-                <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                 <span>|</span>
-                <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
             </div>
         </header>
 
@@ -174,82 +361,80 @@
             <h2 id="perfil-profissional-heading" class="section-title"><span class="lang-pt">PERFIL PROFISSIONAL</span><span class="lang-en">PROFESSIONAL PROFILE</span></h2>
             <div id="perfil-profissional-content" class="leading-relaxed space-y-3">
                 <p data-lang="pt">
-                    Sou estudante de Ciência da Computação com forte atuação em Inteligência Artificial, Machine Learning e automação inteligente de processos. Tenho experiência no desenvolvimento de soluções práticas com IA e dados, integrando modelos preditivos, APIs inteligentes e sistemas automatizados para gerar impacto real nos negócios.
+                    Estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial. Crio aplicações web modernas e interfaces intuitivas, que aumentam a adoção e o engajamento de usuários. Automatizo processos repetitivos com Python, n8n e scripts customizados, reduzindo em até 50% o tempo gasto em tarefas manuais. Domino frameworks como React, Angular, Node.js e Express, aplicando melhores práticas de testes e deploy.
                 </p>
                 <p data-lang="pt">
-                    Atualmente, atuo na OneFlow criando integrações com ferramentas como ChatGPT API, Make e Zapier, otimizando fluxos comerciais, atendimento e suporte. Também liderei automações e a digitalização de processos operacionais na LC Candido Segurança, com soluções que aumentaram a produtividade da equipe em até 25%.
-                </p>
-                <p data-lang="pt">
-                    Busco sempre oportunidades em que posso aplicar IA de forma prática, com impacto real, atuando desde o desenvolvimento até a entrega em produção.
+                    Em projetos de IA com TensorFlow e PyTorch, desenvolvi modelos preditivos e sistemas inteligentes, que elevaram a assertividade de análises de dados em mais de 80%. Como assessor na LC Candido Segurança (de novembro de 2024 a maio de 2025), implementei automações e APIs RESTful que aumentaram a produtividade da equipe em 25%, além de criar dashboards interativos para monitoramento de KPIs em grandes eventos e para apoiar decisões estratégicas.
                 </p>
                 <p data-lang="en">
-                    Computer Science student focused on Artificial Intelligence, Machine Learning and smart automation of processes. I have experience developing practical solutions with AI and data, integrating predictive models, intelligent APIs and automated systems to deliver real business impact.
+                    Computer Science student focusing on Full-Stack Development, UX/UI, and Artificial Intelligence. I create modern web applications and intuitive interfaces that increase user adoption and engagement. I automate repetitive processes with Python, n8n, and custom scripts, reducing time spent on manual tasks by up to 50%. I master frameworks like React, Angular, Node.js, and Express, applying best practices for testing and deployment.
                 </p>
                 <p data-lang="en">
-                    Currently, I work at OneFlow integrating tools like ChatGPT API, Make and Zapier, optimizing commercial, support and prospecting flows. I also led automations and digitalization of operational processes at LC Candido Segurança, delivering solutions that increased team productivity by up to 25%.
-                </p>
-                <p data-lang="en">
-                    I am always looking for opportunities to apply AI in a practical way, with real impact, from development to production delivery.
+                    In AI projects with TensorFlow and PyTorch, I developed predictive models and intelligent systems that improved data analysis accuracy by over 80%. As an advisor at LC Candido Segurança (November 2024–May 2025), I implemented automations and RESTful APIs that increased team productivity by 25%, in addition to creating interactive dashboards for KPI monitoring at major events and supporting strategic decisions.
                 </p>
             </div>
         </section>
 
         <section class="mb-8 revealable" aria-labelledby="skills-heading">
             <h2 id="skills-heading" class="section-title">Hard Skills & Soft Skills</h2>
+            
             <div aria-labelledby="hard-skills-subheading">
                 <h3 id="hard-skills-subheading" class="subsection-title"><i class="fas fa-cogs mr-2" style="color: var(--primary-color);" aria-hidden="true"></i>Hard Skills</h3>
                 <div id="hard-skills-list" class="flex flex-wrap items-center">
-                    <span class="skill-tag mb-2">Python (IA e automação)</span>
-                    <span class="skill-tag mb-2">TensorFlow</span>
-                    <span class="skill-tag mb-2">PyTorch</span>
-                    <span class="skill-tag mb-2">scikit-learn</span>
-                    <span class="skill-tag mb-2">Pandas</span>
-                    <span class="skill-tag mb-2">APIs RESTful</span>
-                    <span class="skill-tag mb-2">Node.js</span>
-                    <span class="skill-tag mb-2">React</span>
-                    <span class="skill-tag mb-2">.NET</span>
-                    <span class="skill-tag mb-2">n8n, Make, Zapier</span>
-                    <span class="skill-tag mb-2">Automação de Dados</span>
-                    <span class="skill-tag mb-2">Integração de Sistemas</span>
-                    <span class="skill-tag mb-2">PostgreSQL</span>
-                    <span class="skill-tag mb-2">Docker</span>
-                    <span class="skill-tag mb-2">Git</span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">.NET 8</span><span class="lang-en">.NET 8</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">C#</span><span class="lang-en">C#</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Node.js (Express.js)</span><span class="lang-en">Node.js (Express.js)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Angular</span><span class="lang-en">Angular</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">React</span><span class="lang-en">React</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">EJS</span><span class="lang-en">EJS</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Tailwind CSS</span><span class="lang-en">Tailwind CSS</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">RESTful APIs</span><span class="lang-en">RESTful APIs</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">n8n workflows</span><span class="lang-en">n8n workflows</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Python scripting</span><span class="lang-en">Python scripting</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Automação de pipelines</span><span class="lang-en">Pipeline Automation</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PostgreSQL</span><span class="lang-en">PostgreSQL</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">SQL Server</span><span class="lang-en">SQL Server</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Docker</span><span class="lang-en">Docker</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Kubernetes</span><span class="lang-en">Kubernetes</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Git</span><span class="lang-en">Git</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">CI/CD</span><span class="lang-en">CI/CD</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">BCRYPT</span><span class="lang-en">BCRYPT</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">JWT</span><span class="lang-en">JWT</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">OWASP</span><span class="lang-en">OWASP</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">DevSecOps</span><span class="lang-en">DevSecOps</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Python (IA)</span><span class="lang-en">Python (AI)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">TensorFlow</span><span class="lang-en">TensorFlow</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PyTorch</span><span class="lang-en">PyTorch</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">scikit‑learn</span><span class="lang-en">scikit‑learn</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Pandas</span><span class="lang-en">Pandas</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Pré‑processamento de Dados</span><span class="lang-en">Data Preprocessing</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">PNL</span><span class="lang-en">NLP</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Figma</span><span class="lang-en">Figma</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Adobe XD</span><span class="lang-en">Adobe XD</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">AWS (Lambda, S3)</span><span class="lang-en">AWS (Lambda, S3)</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Oracle Cloud</span><span class="lang-en">Oracle Cloud</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">HubSpot CRM</span><span class="lang-en">HubSpot CRM</span></span>
+                    <span class="skill-tag mb-2"><span class="lang-pt">Excel Avançado</span><span class="lang-en">Advanced Excel</span></span>
                 </div>
             </div>
+
             <div class="mt-6" aria-labelledby="soft-skills-subheading">
                 <h3 id="soft-skills-subheading" class="subsection-title"><i class="fas fa-users mr-2" style="color: var(--soft-skill-tag-text);" aria-hidden="true"></i>Soft Skills</h3>
                 <div id="soft-skills-list" class="flex flex-wrap items-center">
-                    <span class="soft-skill-tag mb-2">Comunicação clara</span>
-                    <span class="soft-skill-tag mb-2">Resolução de problemas</span>
-                    <span class="soft-skill-tag mb-2">Pensamento analítico</span>
-                    <span class="soft-skill-tag mb-2">Proatividade</span>
-                    <span class="soft-skill-tag mb-2">Trabalho em equipe</span>
-                    <span class="soft-skill-tag mb-2">Aprendizado contínuo</span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Resolução de problemas</span><span class="lang-en">Problem Solving</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Pensamento analítico</span><span class="lang-en">Analytical Thinking</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Comunicação clara</span><span class="lang-en">Clear Communication</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Colaboração</span><span class="lang-en">Collaboration</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Adaptabilidade</span><span class="lang-en">Adaptability</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Liderança</span><span class="lang-en">Leadership</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Princípios de usabilidade</span><span class="lang-en">Usability Principles</span></span>
+                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Acessibilidade</span><span class="lang-en">Accessibility</span></span>
                 </div>
             </div>
         </section>
 
         <section class="mb-8 revealable" aria-labelledby="experiencia-profissional-heading">
             <h2 id="experiencia-profissional-heading" class="section-title"><span class="lang-pt">EXPERIÊNCIA PROFISSIONAL</span><span class="lang-en">PROFESSIONAL EXPERIENCE</span></h2>
-            <div class="mb-6">
-                <header class="job-header">
-                    <h3 class="job-title"><span class="lang-pt">Desenvolvimento de Automações e Inteligência Artificial</span><span class="lang-en">Automation & Artificial Intelligence Developer</span></h3>
-                    <p class="company-name">OneFlow</p>
-                </header>
-                <p class="date-range"><span class="lang-pt">Julho de 2025 – o momento · Remoto</span><span class="lang-en">July 2025 – Present · Remote</span></p>
-                <ul class="list-disc list-inside mt-2 space-y-1">
-                    <li data-lang="pt">Atuação no desenvolvimento de soluções de automação e IA para otimização de processos comerciais.</li>
-                    <li data-lang="pt">Implementação de integrações entre sistemas internos, CRM e ferramentas de IA (ex: ChatGPT API).</li>
-                    <li data-lang="pt">Criação e manutenção de fluxos automatizados (Make, Zapier) para áreas de atendimento, prospecção e suporte.</li>
-                    <li data-lang="pt">Colaboração com times de Vendas e Tecnologia para propor e desenvolver soluções escaláveis.</li>
-                    <li data-lang="pt">Teste, monitoramento e documentação contínua das automações para garantir performance e qualidade das entregas.</li>
-                    <li data-lang="en">Development of automation and AI solutions for process optimization in business operations.</li>
-                    <li data-lang="en">Integration between internal systems, CRM and AI tools (e.g., ChatGPT API).</li>
-                    <li data-lang="en">Building and maintaining automated flows (Make...Zapier) for customer service, prospecting, and support areas.</li>
-                    <li data-lang="en">Collaboration with Sales and Technology teams to propose and build scalable solutions.</li>
-                    <li data-lang="en">Testing, monitoring and continuous documentation of automations to ensure performance and quality of deliveries.</li>
-                </ul>
-            </div>
             <div class="mb-6">
                 <header class="job-header">
                     <h3 class="job-title"><span class="lang-pt">Assessor Técnico</span><span class="lang-en">Technical Advisor</span></h3>
@@ -267,7 +452,7 @@
             </div>
             <div class="mb-6">
                 <header class="job-header">
-                    <h3 class="job-title"><span class="lang-pt">Estagiário </span><span class="lang-en">Intern</span></h3>
+                    <h3 class="job-title"><span class="lang-pt">Estagiário de Tecnologia</span><span class="lang-en">Technology Intern</span></h3>
                     <p class="company-name">Banco Santander</p>
                 </header>
                 <p class="date-range"><span class="lang-pt">Janeiro de 2024 – Agosto de 2024</span><span class="lang-en">January 2024 – August 2024</span></p>
@@ -298,24 +483,36 @@
         </section>
 
         <section class="mb-8 revealable" aria-labelledby="projetos-destacados-heading">
-    <h2 id="projetos-destacados-heading" class="section-title"><span class="lang-pt">PROJETOS DESTACADOS</span><span class="lang-en">FEATURED PROJECTS</span></h2>
-    <div class="mb-6">
-        <h3 class="job-title"><i class="fas fa-brain project-title-icon" aria-hidden="true"></i><span class="lang-pt">AI-Assistant</span><span class="lang-en">AI-Assistant</span></h3>
-        <p class="mt-1"><i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/AI-Assistant" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto AI-Assistant no GitHub">github.com/MatheusTerr/AI-Assistant</a></p>
-        <ul class="list-disc list-inside mt-2 space-y-1">
-            <li data-lang="pt">Plataforma de assistente virtual baseada em Python e IA generativa, com módulos para automação de tarefas e integração via ChatGPT API. Inclui orquestração de comandos, gerenciamento de plugins e fluxos inteligentes para negócios.</li>
-            <li data-lang="en">Virtual assistant platform in Python using generative AI, with modules for task automation and integration via ChatGPT API. Features command orchestration, plugin management and smart flows for business.</li>
-        </ul>
-    </div>
-    <div>
-        <h3 class="job-title"><i class="fas fa-robot project-title-icon" aria-hidden="true"></i><span class="lang-pt">Chatbot_IA_CRM</span><span class="lang-en">Chatbot_IA_CRM</span></h3>
-        <p class="mt-1"><i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/Chatbot_IA_CRM" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Chatbot_IA_CRM no GitHub">github.com/MatheusTerr/Chatbot_IA_CRM</a></p>
-        <ul class="list-disc list-inside mt-2 space-y-1">
-            <li data-lang="pt">Chatbot com integração ao CRM, automação de atendimentos, qualificação de leads e geração de respostas inteligentes via IA. Permite customização de fluxos e integração externa.</li>
-            <li data-lang="en">Chatbot with CRM integration, automated support, lead qualification and smart responses powered by AI. Supports flow customization and external integrations.</li>
-        </ul>
-    </div>
-</section>
+             <h2 id="projetos-destacados-heading" class="section-title"><span class="lang-pt">PROJETOS DESTACADOS</span><span class="lang-en">FEATURED PROJECTS</span></h2>
+            <div class="mb-6">
+                <h3 class="job-title"><i class="fas fa-code project-title-icon" aria-hidden="true"></i><span class="lang-pt">Mini Sistema de Blog</span><span class="lang-en">Mini Blog System</span></h3>
+                <p class="mt-1">
+                    <i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/blog-express" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Mini Sistema de Blog no GitHub">github.com/MatheusTerr/blog-express</a>
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">API RESTful com Express.js e PostgreSQL.</li>
+                    <li data-lang="en">RESTful API with Express.js and PostgreSQL.</li>
+                    <li data-lang="pt">Front-end com EJS e Tailwind CSS.</li>
+                    <li data-lang="en">Front-end with EJS and Tailwind CSS.</li>
+                    <li data-lang="pt">Funcionalidades CRUD e planejamento de autenticação.</li>
+                    <li data-lang="en">CRUD functionalities and authentication planning.</li>
+                    <li data-lang="pt">Dashboards interativos para análise de dados de visitas e engajamento.</li>
+                    <li data-lang="en">Interactive dashboards for visit and engagement data analysis.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="job-title"><i class="fas fa-shield-alt project-title-icon" aria-hidden="true"></i><span class="lang-pt">API de Autenticação Segura (.NET 8 + PostgreSQL + BCRYPT + JWT)</span><span class="lang-en">Secure Authentication API (.NET 8 + PostgreSQL + BCRYPT + JWT)</span></h3>
+                 <p class="mt-1">
+                    <i class="fab fa-github" aria-hidden="true" style="color: var(--icon-color);"></i> <a href="https://github.com/MatheusTerr/letshare-auth-api" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto API de Autenticação no GitHub">github.com/MatheusTerr/letshare-auth-api</a>
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li data-lang="pt">Endpoints RESTful, hash de senhas com BCRYPT e emissão de tokens JWT.</li>
+                    <li data-lang="en">RESTful endpoints, password hashing with BCRYPT, and JWT token issuance.</li>
+                    <li data-lang="pt">Dockerizado e pronto para deploy em Kubernetes, com refresh tokens seguros e logs estruturados.</li>
+                    <li data-lang="en">Dockerized and ready for Kubernetes deployment, with secure refresh tokens and structured logs.</li>
+                </ul>
+            </div>
+        </section>
 
         <section class="mb-8 revealable" aria-labelledby="formacao-academica-heading">
             <h2 id="formacao-academica-heading" class="section-title"><span class="lang-pt">FORMAÇÃO ACADÊMICA</span><span class="lang-en">EDUCATION</span></h2>
@@ -357,11 +554,12 @@
                 <li data-lang="en">English: B2 (Upper Intermediate).</li>
             </ul>
         </section>
-
+        
         <footer class="text-center mt-10 pt-6 border-t revealable">
             <p class="text-sm" style="color: var(--text-muted-color);" data-lang="pt">Disponível para oportunidades em Inteligência Artificial, automação e desenvolvimento Full-Stack.</p>
             <p class="text-sm" style="color: var(--text-muted-color);" data-lang="en">Available for opportunities in Artificial Intelligence, automation, and Full-Stack development.</p>
-            <div class="project-note-footer revealable">
+            
+            <div class="project-note-footer revealable"> 
                 <p class="mb-2">
                     <span class="lang-pt"><i class="fas fa-laptop-code mr-2"></i>Este currículo é uma aplicação web interativa, construída do zero com HTML, CSS (Tailwind) e JavaScript.</span>
                     <span class="lang-en"><i class="fas fa-laptop-code mr-2"></i>This resume is an interactive web application, built from scratch with HTML, CSS (Tailwind), and JavaScript.</span>
@@ -371,6 +569,7 @@
                     <span class="lang-en">Curious to see behind the scenes? Explore the source code on my <a href="https://github.com/MatheusTerr/Meu-curriculo" target="_blank" rel="noopener noreferrer" title="View resume source code on GitHub">GitHub</a>!</span>
                 </p>
             </div>
+
             <div class="print-only-links">
                 <p class="font-semibold mt-3">
                     <span class="lang-pt">Links de Contato (para versão impressa):</span>
@@ -382,27 +581,33 @@
                 <p>
                     <span class="lang-pt">GitHub:</span><span class="lang-en">GitHub:</span> github.com/MatheusTerr
                 </p>
-                <p>
+                 <p>
                     <span class="lang-pt">Currículo Online:</span><span class="lang-en">Online Resume:</span> matheusterr.github.io/Meu-curriculo/
                 </p>
             </div>
         </footer>
     </main>
+
     <button id="backToTopBtn" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const htmlEl = document.documentElement;
             const themeToggleBtn = document.getElementById('themeToggleBtn');
             const langToggleBtn = document.getElementById('langToggleBtn');
             const dynamicGreetingEl = document.getElementById('dynamicGreeting');
+            
             let currentLang = localStorage.getItem('language') || 'pt-BR';
+
+            // --- Modo Claro/Escuro ---
             const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            htmlEl.classList.remove('light', 'dark');
+            htmlEl.classList.remove('light', 'dark'); 
             htmlEl.classList.add(currentTheme);
+            
             function updateThemeButtonIcon(theme) {
-                if (themeToggleBtn) {
+                if (themeToggleBtn) { 
                     if (theme === 'dark') {
                         themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Mudar para modo claro</span>';
                     } else {
@@ -411,6 +616,7 @@
                 }
             }
             updateThemeButtonIcon(currentTheme);
+
             if (themeToggleBtn) {
                 themeToggleBtn.addEventListener('click', () => {
                     let newTheme;
@@ -427,30 +633,36 @@
                     updateThemeButtonIcon(newTheme);
                 });
             }
+
+            // --- Troca de Idioma ---
             htmlEl.setAttribute('lang', currentLang);
+            
             function updateLangToggleBtnText(lang) {
-                if (langToggleBtn) {
+                 if (langToggleBtn) { 
                     const langPtSpan = langToggleBtn.querySelector('.lang-pt');
                     const langEnSpan = langToggleBtn.querySelector('.lang-en');
                     if (lang === 'pt-BR') {
                         if(langPtSpan) langPtSpan.style.display = 'inline';
                         if(langEnSpan) langEnSpan.style.display = 'none';
-                    } else {
+                    } else { // 'en'
                         if(langPtSpan) langPtSpan.style.display = 'none';
                         if(langEnSpan) langEnSpan.style.display = 'inline';
                     }
                 }
             }
             updateLangToggleBtnText(currentLang);
+
             if (langToggleBtn) {
                 langToggleBtn.addEventListener('click', () => {
                     let newLangValue = htmlEl.getAttribute('lang') === 'pt-BR' ? 'en' : 'pt-BR';
                     htmlEl.setAttribute('lang', newLangValue);
                     localStorage.setItem('language', newLangValue);
                     updateLangToggleBtnText(newLangValue);
-                    currentLang = newLangValue;
+                    currentLang = newLangValue; 
                 });
             }
+            
+            // --- Mensagem Dinâmica ---
             const hour = new Date().getHours();
             let greeting = "";
             let greetingEn = "";
@@ -466,6 +678,8 @@
             if(dynamicGreetingEl) {
                 dynamicGreetingEl.innerHTML = `<span class="lang-pt">${greeting}</span><span class="lang-en">${greetingEn}</span>`;
             }
+
+            // --- Animação de Scroll Reveal ---
             const revealables = document.querySelectorAll('.revealable');
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -475,6 +689,8 @@
                 });
             }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
             revealables.forEach(el => revealObserver.observe(el));
+
+            // --- Botão Voltar ao Topo ---
             const backToTopButton = document.getElementById('backToTopBtn');
             if(backToTopButton) {
                 window.addEventListener('scroll', function() {
@@ -486,7 +702,7 @@
                 });
                 backToTopButton.addEventListener('click', function(e) {
                     e.preventDefault();
-                    window.scrollTo({ top: 0 });
+                    window.scrollTo({ top: 0 }); 
                 });
             }
         });
