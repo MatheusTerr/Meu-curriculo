@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="light"> <head>
+<html lang="pt-BR" class="light">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Currículo de Matheus Queiroz Batista, estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial.">
@@ -310,128 +311,129 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="no-print py-3 px-6 sticky top-0 z-40 flex justify-between items-center">
-        <div id="dynamicGreeting" class="text-sm" title="Saudação dinâmica baseada na hora do dia" style="color: var(--text-muted-color);"></div>
-        <div class="flex items-center space-x-3">
-            <button id="langToggleBtn" 
-                    title="Alternar Idioma (PT/EN)"
-                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
-                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
-                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
-                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
-                <span class="lang-pt">EN</span><span class="lang-en">PT</span>
-            </button>
-            <button id="themeToggleBtn" 
-                    title="Alternar Modo Claro/Escuro"
-                    class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
-                    style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
-                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
-                    onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
-                <i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>
-            </button>
-            <button onclick="window.print()" 
-                    aria-label="Imprimir ou Salvar Currículo como PDF" 
-                    class="font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out" 
-                    style="background-color: var(--primary-color); color: var(--button-text-color);" 
-                    onmouseover="this.style.backgroundColor='var(--primary-hover-color)';" 
-                    onmouseout="this.style.backgroundColor='var(--primary-color)';">
-                <i class="fas fa-print mr-2" aria-hidden="true"></i><span class="lang-pt">Imprimir</span><span class="lang-en">Print</span> / PDF
-            </button>
-        </div>
+      <div id="dynamicGreeting" class="text-sm" style="color: var(--text-muted-color);"></div>
+      <div class="flex items-center space-x-3">
+        <button id="langToggleBtn" title="Alternar Idioma (PT/EN)" class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+          style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+          onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+          onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
+          <span class="lang-pt">EN</span><span class="lang-en">PT</span>
+        </button>
+        <button id="themeToggleBtn" title="Alternar Modo Claro/Escuro" class="font-medium px-3 py-2 rounded-md shadow-sm border transition-all duration-200 ease-in-out"
+          style="background-color: var(--primary-color); color: var(--button-text-color); border-color: var(--button-border-color);"
+          onmouseover="this.style.backgroundColor='var(--primary-hover-color)'; this.style.borderColor='var(--primary-hover-color)';"
+          onmouseout="this.style.backgroundColor='var(--primary-color)'; this.style.borderColor='var(--button-border-color)';">
+          <i class="fas fa-moon"></i><span class="sr-only">Mudar para modo escuro</span>
+        </button>
+        <button onclick="window.print()" aria-label="Imprimir ou Salvar Currículo como PDF"
+          class="font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 ease-in-out"
+          style="background-color: var(--primary-color); color: var(--button-text-color);"
+          onmouseover="this.style.backgroundColor='var(--primary-hover-color)';"
+          onmouseout="this.style.backgroundColor='var(--primary-color)';">
+          <i class="fas fa-print mr-2" aria-hidden="true"></i><span class="lang-pt">Imprimir</span><span class="lang-en">Print</span> / PDF
+        </button>
+      </div>
     </nav>
     <main class="container-main p-6 md:p-10 my-8">
-        <header class="text-center mb-8 revealable">
-            <h1 class="text-4xl font-bold" style="color: var(--section-title-color);">Matheus Queiroz Batista</h1>
-            <div class="typewriter mx-auto mt-2"> 
-                 <h2 class="text-lg md:text-xl"><span class="lang-pt">Desenvolvedor | Estudante | Explorador de IA</span><span class="lang-en">Developer | Student | AI Explorer</span></h2>
-            </div>
-            <p class="text-md mt-3" style="color: var(--text-muted-color);"><span class="lang-pt">Guarulhos, SP – Brasil</span><span class="lang-en">Guarulhos, SP – Brazil</span></p>
-            <div class="contact-info mt-4 space-x-2 md:space-x-4 text-sm md:text-base">
-                <a href="mailto:matheusqueirozterr@gmail.com" title="Enviar e-mail para Matheus"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
-                <span>|</span>
-                <a href="tel:+5511959074638" title="Ligar para Matheus"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
-                <br class="md:hidden"> <span class="hidden md:inline">|</span>
-                <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                <span>|</span>
-                <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-            </div>
-        </header>
-
-        <section class="mb-8 revealable" aria-labelledby="perfil-profissional-heading">
-            <h2 id="perfil-profissional-heading" class="section-title"><span class="lang-pt">PERFIL PROFISSIONAL</span><span class="lang-en">PROFESSIONAL PROFILE</span></h2>
-            <div id="perfil-profissional-content" class="leading-relaxed space-y-3">
-                <p data-lang="pt">
-                    Estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial. Crio aplicações web modernas e interfaces intuitivas, que aumentam a adoção e o engajamento de usuários. Automatizo processos repetitivos com Python, n8n e scripts customizados, reduzindo em até 50% o tempo gasto em tarefas manuais. Domino frameworks como React, Angular, Node.js e Express, aplicando melhores práticas de testes e deploy.
-                </p>
-                <p data-lang="pt">
-                    Em projetos de IA com TensorFlow e PyTorch, desenvolvi modelos preditivos e sistemas inteligentes, que elevaram a assertividade de análises de dados em mais de 80%. Como assessor na LC Candido Segurança (de novembro de 2024 a maio de 2025), implementei automações e APIs RESTful que aumentaram a produtividade da equipe em 25%, além de criar dashboards interativos para monitoramento de KPIs em grandes eventos e para apoiar decisões estratégicas.
-                </p>
-                <p data-lang="en">
-                    Computer Science student focusing on Full-Stack Development, UX/UI, and Artificial Intelligence. I create modern web applications and intuitive interfaces that increase user adoption and engagement. I automate repetitive processes with Python, n8n, and custom scripts, reducing time spent on manual tasks by up to 50%. I master frameworks like React, Angular, Node.js, and Express, applying best practices for testing and deployment.
-                </p>
-                <p data-lang="en">
-                    In AI projects with TensorFlow and PyTorch, I developed predictive models and intelligent systems that improved data analysis accuracy by over 80%. As an advisor at LC Candido Segurança (November 2024–May 2025), I implemented automations and RESTful APIs that increased team productivity by 25%, in addition to creating interactive dashboards for KPI monitoring at major events and supporting strategic decisions.
-                </p>
-            </div>
-        </section>
-
-        <section class="mb-8 revealable" aria-labelledby="skills-heading">
-            <h2 id="skills-heading" class="section-title">Hard Skills & Soft Skills</h2>
-            
-            <div aria-labelledby="hard-skills-subheading">
-                <h3 id="hard-skills-subheading" class="subsection-title"><i class="fas fa-cogs mr-2" style="color: var(--primary-color);" aria-hidden="true"></i>Hard Skills</h3>
-                <div id="hard-skills-list" class="flex flex-wrap items-center">
-                    <span class="skill-tag mb-2"><span class="lang-pt">.NET 8</span><span class="lang-en">.NET 8</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">C#</span><span class="lang-en">C#</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Node.js (Express.js)</span><span class="lang-en">Node.js (Express.js)</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Angular</span><span class="lang-en">Angular</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">React</span><span class="lang-en">React</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">EJS</span><span class="lang-en">EJS</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Tailwind CSS</span><span class="lang-en">Tailwind CSS</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">RESTful APIs</span><span class="lang-en">RESTful APIs</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">n8n workflows</span><span class="lang-en">n8n workflows</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Python scripting</span><span class="lang-en">Python scripting</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Automação de pipelines</span><span class="lang-en">Pipeline Automation</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">PostgreSQL</span><span class="lang-en">PostgreSQL</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">SQL Server</span><span class="lang-en">SQL Server</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Docker</span><span class="lang-en">Docker</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Kubernetes</span><span class="lang-en">Kubernetes</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Git</span><span class="lang-en">Git</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">CI/CD</span><span class="lang-en">CI/CD</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">BCRYPT</span><span class="lang-en">BCRYPT</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">JWT</span><span class="lang-en">JWT</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">OWASP</span><span class="lang-en">OWASP</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">DevSecOps</span><span class="lang-en">DevSecOps</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Python (IA)</span><span class="lang-en">Python (AI)</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">TensorFlow</span><span class="lang-en">TensorFlow</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">PyTorch</span><span class="lang-en">PyTorch</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">scikit‑learn</span><span class="lang-en">scikit‑learn</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Pandas</span><span class="lang-en">Pandas</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Pré‑processamento de Dados</span><span class="lang-en">Data Preprocessing</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">PNL</span><span class="lang-en">NLP</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Figma</span><span class="lang-en">Figma</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Adobe XD</span><span class="lang-en">Adobe XD</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">AWS (Lambda, S3)</span><span class="lang-en">AWS (Lambda, S3)</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Oracle Cloud</span><span class="lang-en">Oracle Cloud</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">HubSpot CRM</span><span class="lang-en">HubSpot CRM</span></span>
-                    <span class="skill-tag mb-2"><span class="lang-pt">Excel Avançado</span><span class="lang-en">Advanced Excel</span></span>
-                </div>
-            </div>
-
-            <div class="mt-6" aria-labelledby="soft-skills-subheading">
-                <h3 id="soft-skills-subheading" class="subsection-title"><i class="fas fa-users mr-2" style="color: var(--soft-skill-tag-text);" aria-hidden="true"></i>Soft Skills</h3>
-                <div id="soft-skills-list" class="flex flex-wrap items-center">
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Resolução de problemas</span><span class="lang-en">Problem Solving</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Pensamento analítico</span><span class="lang-en">Analytical Thinking</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Comunicação clara</span><span class="lang-en">Clear Communication</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Colaboração</span><span class="lang-en">Collaboration</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Adaptabilidade</span><span class="lang-en">Adaptability</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Liderança</span><span class="lang-en">Leadership</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Princípios de usabilidade</span><span class="lang-en">Usability Principles</span></span>
-                    <span class="soft-skill-tag mb-2"><span class="lang-pt">Acessibilidade</span><span class="lang-en">Accessibility</span></span>
-                </div>
-            </div>
-        </section>
+      <!-- Header -->
+      <header class="text-center mb-8 revealable">
+        <h1 class="text-4xl font-bold" style="color: var(--section-title-color);">Matheus Queiroz Batista</h1>
+        <div class="typewriter mx-auto mt-2">
+          <h2 class="text-lg md:text-xl">
+            <span class="lang-pt">Desenvolvedor | Estudante | Explorador de IA</span>
+            <span class="lang-en">Developer | Student | AI Explorer</span>
+          </h2>
+        </div>
+        <p class="text-md mt-3" style="color: var(--text-muted-color);">
+          <span class="lang-pt">Guarulhos, SP – Brasil</span>
+          <span class="lang-en">Guarulhos, SP – Brazil</span>
+        </p>
+        <div class="contact-info mt-4 space-x-2 md:space-x-4 text-sm md:text-base">
+          <a href="mailto:matheusqueirozterr@gmail.com" title="Enviar e-mail para Matheus"><i class="fas fa-envelope" aria-hidden="true"></i> matheusqueirozterr@gmail.com</a>
+          <span>|</span>
+          <a href="tel:+5511959074638" title="Ligar para Matheus"><i class="fas fa-mobile-alt" aria-hidden="true"></i> +55 11 95907‑4638</a>
+          <br class="md:hidden"> <span class="hidden md:inline">|</span>
+          <a href="https://github.com/MatheusTerr" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+          <span>|</span>
+          <a href="https://linkedin.com/in/matheusqueirozdev" target="_blank" rel="noopener noreferrer" title="Ver perfil de Matheus no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </div>
+      </header>
+      <!-- Profile -->
+      <section class="mb-8 revealable" aria-labelledby="perfil-profissional-heading">
+        <h2 id="perfil-profissional-heading" class="section-title"><span class="lang-pt">PERFIL PROFISSIONAL</span><span class="lang-en">PROFESSIONAL PROFILE</span></h2>
+        <div id="perfil-profissional-content" class="leading-relaxed space-y-3">
+          <p data-lang="pt">
+            Estudante de Ciência da Computação com foco em desenvolvimento Full-Stack, UX/UI e Inteligência Artificial. Crio aplicações web modernas e interfaces intuitivas, que aumentam a adoção e o engajamento de usuários. Automatizo processos repetitivos com Python, n8n e scripts customizados, reduzindo em até 50% o tempo gasto em tarefas manuais. Domino frameworks como React, Angular, Node.js e Express, aplicando melhores práticas de testes e deploy.
+          </p>
+          <p data-lang="pt">
+            Em projetos de IA com TensorFlow e PyTorch, desenvolvi modelos preditivos e sistemas inteligentes, que elevaram a assertividade de análises de dados em mais de 80%. Como assessor na LC Cândido Segurança (de novembro de 2024 a maio de 2025), implementei automações e APIs RESTful que aumentaram a produtividade da equipe em 25%, além de criar dashboards interativos para monitoramento de KPIs em grandes eventos e apoiar decisões estratégicas.
+          </p>
+          <p data-lang="en">
+            Computer Science student focusing on Full-Stack Development, UX/UI, and Artificial Intelligence. I create modern web applications and intuitive interfaces that increase user adoption and engagement. I automate repetitive processes with Python, n8n, and custom scripts, reducing manual task time by up to 50%. I master frameworks like React, Angular, Node.js, and Express, applying best practices for testing and deployment.
+          </p>
+          <p data-lang="en">
+            In AI projects with TensorFlow and PyTorch, I developed predictive models and intelligent systems that improved data analysis accuracy by over 80%. As an advisor at LC Cândido Segurança (Nov 2024 – May 2025), I implemented automations and RESTful APIs that increased team productivity by 25%, and created interactive dashboards for KPI monitoring at major events and supporting strategic decisions.
+          </p>
+        </div>
+      </section>
+      <!-- Hard Skills & Soft Skills -->
+      <section class="mb-8 revealable" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="section-title">Hard Skills & Soft Skills</h2>
+        <div aria-labelledby="hard-skills-subheading">
+          <h3 id="hard-skills-subheading" class="subsection-title"><i class="fas fa-cogs mr-2" style="color: var(--primary-color);" aria-hidden="true"></i>Hard Skills</h3>
+          <div id="hard-skills-list" class="flex flex-wrap items-center">
+            <span class="skill-tag mb-2"><span class="lang-pt">.NET 8</span><span class="lang-en">.NET 8</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">C#</span><span class="lang-en">C#</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Node.js (Express.js)</span><span class="lang-en">Node.js (Express.js)</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Angular</span><span class="lang-en">Angular</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">React</span><span class="lang-en">React</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">EJS</span><span class="lang-en">EJS</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Tailwind CSS</span><span class="lang-en">Tailwind CSS</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">RESTful APIs</span><span class="lang-en">RESTful APIs</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">n8n workflows</span><span class="lang-en">n8n workflows</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Python scripting</span><span class="lang-en">Python scripting</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Automação de pipelines</span><span class="lang-en">Pipeline Automation</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">PostgreSQL</span><span class="lang-en">PostgreSQL</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">SQL Server</span><span class="lang-en">SQL Server</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Docker</span><span class="lang-en">Docker</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Kubernetes</span><span class="lang-en">Kubernetes</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Git</span><span class="lang-en">Git</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">CI/CD</span><span class="lang-en">CI/CD</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">BCRYPT</span><span class="lang-en">BCRYPT</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">JWT</span><span class="lang-en">JWT</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">OWASP</span><span class="lang-en">OWASP</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">DevSecOps</span><span class="lang-en">DevSecOps</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Python (IA)</span><span class="lang-en">Python (AI)</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">TensorFlow</span><span class="lang-en">TensorFlow</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">PyTorch</span><span class="lang-en">PyTorch</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">scikit‑learn</span><span class="lang-en">scikit‑learn</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Pandas</span><span class="lang-en">Pandas</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Pré‑processamento de Dados</span><span class="lang-en">Data Preprocessing</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">PNL</span><span class="lang-en">NLP</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Figma</span><span class="lang-en">Figma</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Adobe XD</span><span class="lang-en">Adobe XD</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">AWS (Lambda, S3)</span><span class="lang-en">AWS (Lambda, S3)</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Oracle Cloud</span><span class="lang-en">Oracle Cloud</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">HubSpot CRM</span><span class="lang-en">HubSpot CRM</span></span>
+            <span class="skill-tag mb-2"><span class="lang-pt">Excel Avançado</span><span class="lang-en">Advanced Excel</span></span>
+          </div>
+        </div>
+        <div class="mt-6" aria-labelledby="soft-skills-subheading">
+          <h3 id="soft-skills-subheading" class="subsection-title"><i class="fas fa-users mr-2" style="color: var(--soft-skill-tag-text);" aria-hidden="true"></i>Soft Skills</h3>
+          <div id="soft-skills-list" class="flex flex-wrap items-center">
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Resolução de problemas</span><span class="lang-en">Problem Solving</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Pensamento analítico</span><span class="lang-en">Analytical Thinking</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Comunicação clara</span><span class="lang-en">Clear Communication</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Colaboração</span><span class="lang-en">Collaboration</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Adaptabilidade</span><span class="lang-en">Adaptability</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Liderança</span><span class="lang-en">Leadership</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Princípios de usabilidade</span><span class="lang-en">Usability Principles</span></span>
+            <span class="soft-skill-tag mb-2"><span class="lang-pt">Acessibilidade</span><span class="lang-en">Accessibility</span></span>
+          </div>
+        </div>
+      </section>
 
         <section class="mb-8 revealable" aria-labelledby="experiencia-profissional-heading">
             <h2 id="experiencia-profissional-heading" class="section-title"><span class="lang-pt">EXPERIÊNCIA PROFISSIONAL</span><span class="lang-en">PROFESSIONAL EXPERIENCE</span></h2>
